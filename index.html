@@ -109,11 +109,151 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
 }
-.home-hero h1 { 
-  color: var(--warm-dark); 
-  margin: 0 0 .5rem; 
-  font-size: clamp(2rem, 4vw, 3.5rem); 
+.home-hero h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.1; }
+.home-hero h1 em { color: var(--terracotta-dark); }
+.home-hero .tagline { color: var(--warm-mid); margin: 0 0 3rem; font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 400; }
+
+/* SECTION CARDS (home) */
+.section-cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  display: grid;
 }
-</style>
+.section-card {
+  background: var(--warm-white);
+  border-radius: 16px;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 20px #c4755a14;
+}
+.section-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px #c4755a29; }
+.section-card-accent { height: 6px; }
+.section-card-accent.terracotta { background: linear-gradient(90deg, var(--terracotta-dark), var(--terracotta)); }
+.section-card-accent.teal { background: linear-gradient(90deg, var(--teal-dark), var(--teal)); }
+.section-card-accent.mixed { background: linear-gradient(90deg, var(--terracotta), var(--teal)); }
+.section-card-body { flex-direction: column; flex: 1; padding: 2rem 1.75rem 2.25rem; display: flex; }
+.section-card-icon { margin-bottom: 1rem; display: block; }
+.section-card-icon svg { width: 2.5rem; height: 2.5rem; }
+.section-card h2 { color: var(--warm-dark); margin: 0 0 .6rem; font-size: 1.8rem; line-height: 1.2; }
+.section-card p { color: var(--warm-mid); flex: 1; margin: 0 0 1.5rem; font-size: .92rem; line-height: 1.65; }
+.section-card .card-cta {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.section-card.teal-cta .card-cta { color: var(--teal-dark); }
+.section-card:hover .card-cta { gap: .75rem; }
+
+  </style>
 </head>
 <body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="home-hero">
+    <h1>Life, <em>Little Ones</em>,<br>& Everything in Between</h1>
+    <p class="tagline">Motherhood Unfiltered</p>
+  </section>
+
+  <!-- ===== SECTION CARDS ===== -->
+  <div class="section-cards">
+
+    <!-- About card -->
+    <a href="about.html" class="section-card">
+      <div class="section-card-accent terracotta"></div>
+      <div class="section-card-body">
+        <span class="section-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--terracotta-dark)">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </span>
+        <h2>About Me</h2>
+        <p>A first-time mama figuring it all out — one nap time, one outfit, and one Amazon find at a time. Come say hi.</p>
+        <span class="card-cta">Read More →</span>
+      </div>
+    </a>
+
+    <!-- All Things Baby card -->
+    <a href="category-all-things-baby.html" class="section-card teal-cta">
+      <div class="section-card-accent teal"></div>
+      <div class="section-card-body">
+        <span class="section-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--teal-dark)">
+            <path d="M12 2C8 2 4 5.5 4 10c0 3 1.5 5.5 4 7v3h8v-3c2.5-1.5 4-4 4-7 0-4.5-4-8-8-8z"/>
+            <path d="M9 21h6"/>
+          </svg>
+        </span>
+        <h2>All Things Baby</h2>
+        <p>Gear reviews, sleep tips, feeding finds, and real talk about the wild ride of new motherhood. No fluff — just the good stuff.</p>
+        <span class="card-cta">Explore →</span>
+      </div>
+    </a>
+
+    <!-- Fashion card -->
+    <a href="category-fashion.html" class="section-card">
+      <div class="section-card-accent mixed"></div>
+      <div class="section-card-body">
+        <span class="section-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--terracotta-dark)">
+            <path d="M9 3H5l-2 6h18l-2-6h-4"/>
+            <path d="M9 3a3 3 0 0 0 6 0"/>
+            <rect x="3" y="9" width="18" height="12" rx="2"/>
+          </svg>
+        </span>
+        <h2>Fashion Finds</h2>
+        <p>Because looking put-together on three hours of sleep is a superpower. Postpartum style, mama-approved outfits & closet confessions.</p>
+        <span class="card-cta">Get Styled →</span>
+      </div>
+    </a>
+
+    <!-- Fitness card -->
+    <a href="category-fitness.html" class="section-card teal-cta">
+      <div class="section-card-accent teal"></div>
+      <div class="section-card-body">
+        <span class="section-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--teal-dark)">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            <line x1="6" y1="1" x2="6" y2="4"/>
+            <line x1="10" y1="1" x2="10" y2="4"/>
+            <line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+        </span>
+        <h2>Fitness</h2>
+        <p>Postpartum movement, honest workout recaps, and finding energy when you're running on love (and coffee).</p>
+        <span class="card-cta">Get Moving →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit · Made with love (and coffee)</p>
+  </footer>
+
+</body>
+</html>
