@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realistic Diaper Review & Rankings · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+/* ================================================
+   THE STEPH F EDIT — Shared Styles
+   Edit colors, fonts, and layout here.
+   ================================================ */
+
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+
+/* HOME HERO */
+.home-hero {
+  background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--teal-light) 100%);
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.home-hero::before {
+  content: "";
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.15'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: absolute;
+  inset: 0;
+}
+.home-hero h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.1; }
+.home-hero h1 em { color: var(--terracotta-dark); }
+.home-hero .tagline { color: var(--warm-mid); margin: 0 0 3rem; font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 400; }
+
+/* SECTION CARDS (home) */
+.section-cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  display: grid;
+}
+.section-card {
+  background: var(--warm-white);
+  border-radius: 16px;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 20px #c4755a14;
+}
+.section-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px #c4755a29; }
+.section-card-accent { height: 6px; }
+.section-card-accent.terracotta { background: linear-gradient(90deg, var(--terracotta-dark), var(--terracotta)); }
+.section-card-accent.teal { background: linear-gradient(90deg, var(--teal-dark), var(--teal)); }
+.section-card-accent.mixed { background: linear-gradient(90deg, var(--terracotta), var(--teal)); }
+.section-card-body { flex-direction: column; flex: 1; padding: 2rem 1.75rem 2.25rem; display: flex; }
+.section-card-icon { margin-bottom: 1rem; display: block; }
+.section-card-icon svg { width: 2.5rem; height: 2.5rem; }
+.section-card h2 { color: var(--warm-dark); margin: 0 0 .6rem; font-size: 1.8rem; line-height: 1.2; }
+.section-card p { color: var(--warm-mid); flex: 1; margin: 0 0 1.5rem; font-size: .92rem; line-height: 1.65; }
+.section-card .card-cta {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.section-card.teal-cta .card-cta { color: var(--teal-dark); }
+.section-card:hover .card-cta { gap: .75rem; }
+
+/* ABOUT PAGE */
+.about-page { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+.about-layout { grid-template-columns: 1fr 1.5fr; align-items: start; gap: 4rem; margin-bottom: 4rem; display: grid; }
+.about-photo img { width: 100%; object-fit: cover; aspect-ratio: 3/4; border-radius: 20px 20px 80px 20px; }
+.about-intro h1 { color: var(--warm-dark); margin: 0 0 .25rem; font-size: 3rem; line-height: 1; }
+.about-intro .subtitle { color: var(--teal-dark); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1.75rem; font-size: 1rem; font-weight: 600; }
+.about-intro p { color: #5c3d2c; margin: 0 0 1rem; font-size: 1rem; line-height: 1.8; }
+.about-intro p:last-child { margin-bottom: 0; }
+.divider { background: linear-gradient(90deg, var(--terracotta-light), var(--teal-light), transparent); height: 1px; margin: 3.5rem 0; }
+.first-post { background: var(--warm-white); border-left: 4px solid var(--teal); border-radius: 16px; padding: 2.5rem; box-shadow: 0 2px 16px #c4755a14; }
+.first-post .post-label { letter-spacing: .14em; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 1rem; font-size: .75rem; font-weight: 700; }
+.first-post p { color: #5c3d2c; margin: 0 0 1rem; font-size: 1rem; line-height: 1.8; }
+.first-post p:last-child { margin-bottom: 0; }
+
+/* CATEGORY PAGE */
+.category-header { background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--cream) 60%); text-align: center; border-bottom: 1px solid var(--terracotta-light); padding: 4rem 2rem 3rem; }
+.category-header.teal-bg { background: linear-gradient(135deg, var(--teal-light) 0%, var(--cream) 60%); border-bottom-color: var(--teal-light); }
+.category-header h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(2.2rem, 5vw, 3.8rem); }
+.category-header p { color: var(--warm-mid); margin: 0; font-size: 1rem; }
+.posts-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; display: grid; }
+.post-card { background: var(--warm-white); border-radius: 14px; flex-direction: column; text-decoration: none; transition: transform .2s, box-shadow .2s; display: flex; overflow: hidden; box-shadow: 0 2px 14px #c4755a12; }
+.post-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px #c4755a24; }
+.post-card-image { aspect-ratio: 16/9; background: linear-gradient(135deg, var(--terracotta-light), var(--teal-light)); justify-content: center; align-items: center; display: flex; overflow: hidden; }
+.post-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.post-card-image svg { opacity: .3; width: 40px; height: 40px; color: var(--warm-mid); }
+.post-card-body { flex-direction: column; flex: 1; padding: 1.5rem; display: flex; }
+.post-card-date { letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; font-size: .75rem; font-weight: 600; }
+.post-card h3 { color: var(--warm-dark); margin: 0 0 .6rem; font-size: 1.4rem; line-height: 1.25; }
+.post-card p { color: var(--warm-mid); flex: 1; margin: 0; font-size: .9rem; line-height: 1.65; }
+.coming-soon-card { background: var(--warm-white); text-align: center; border: 2px dashed var(--terracotta-light); color: var(--muted); border-radius: 14px; padding: 3rem 2rem; }
+.coming-soon-card h3 { color: var(--warm-mid); margin: 0 0 .5rem; font-size: 1.6rem; }
+.coming-soon-card p { margin: 0; font-size: .9rem; }
+
+/* POST PAGE */
+.post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
+.post-page .back-link { letter-spacing: .1em; text-transform: uppercase; color: var(--terracotta-dark); align-items: center; gap: .4rem; margin-bottom: 2.5rem; font-size: .8rem; font-weight: 700; text-decoration: none; transition: gap .2s; display: inline-flex; }
+.post-page .back-link:hover { gap: .6rem; }
+.post-page h1 { color: var(--warm-dark); margin: 0 0 .75rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+.post-page .post-meta { letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem; font-size: .8rem; font-weight: 600; }
+.post-page .post-body { color: #4a3020; font-size: 1.05rem; line-height: 1.85; }
+.post-page .post-body p { margin: 0 0 1.4rem; }
+.post-page .post-body h2 { color: var(--warm-dark); margin: 2rem 0 .75rem; font-size: 1.8rem; }
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .nav-links { gap: 1.2rem; }
+  .site-nav .brand { font-size: 1.3rem; }
+}
+
+
+/* ── Post-specific extras ── */
+.post-page .post-body a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-page .post-body a:hover { color: var(--teal-dark); }
+
+/* Brand ranking cards */
+.diaper-card {
+  background: var(--warm-white);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  box-shadow: 0 3px 20px #c4755a14;
+  border: 1px solid var(--terracotta-light);
+}
+.diaper-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid var(--terracotta-light);
+}
+.diaper-card-header.teal-header { border-bottom-color: var(--teal-light); background: linear-gradient(90deg, var(--teal-light) 0%, var(--warm-white) 100%); }
+.diaper-card-header.terracotta-header { background: linear-gradient(90deg, var(--terracotta-light) 0%, var(--warm-white) 100%); }
+.rank-badge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--terracotta-dark);
+  line-height: 1;
+  min-width: 2rem;
+}
+.teal-header .rank-badge { color: var(--teal-dark); }
+.diaper-card-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--warm-dark);
+  line-height: 1.1;
+}
+.diaper-card-header .brand-tag {
+  margin-left: auto;
+  font-size: .75rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 20px;
+  background: var(--terracotta-light);
+  color: var(--terracotta-dark);
+  white-space: nowrap;
+}
+.teal-header .brand-tag { background: var(--teal-light); color: var(--teal-dark); }
+.diaper-card-body { padding: 1.5rem 1.75rem 1.75rem; }
+.diaper-card-body ul {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.diaper-card-body ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  color: #5c3d2c;
+  font-size: .97rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+.diaper-card-body ul li::before {
+  content: "✦";
+  color: var(--terracotta);
+  font-size: .7rem;
+  margin-top: .35rem;
+  flex-shrink: 0;
+}
+.teal-card .diaper-card-body ul li::before { color: var(--teal); }
+.diaper-card-body .highlight-note {
+  background: linear-gradient(90deg, var(--teal-light), var(--cream));
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.diaper-card-body .terracotta-note {
+  background: linear-gradient(90deg, var(--terracotta-light), var(--cream));
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--terracotta-dark);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--terracotta-dark);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .6rem 1.2rem;
+  border-radius: 30px;
+  transition: background .2s, transform .15s;
+}
+.shop-btn:hover { background: var(--warm-dark) !important; transform: translateY(-1px); }
+.shop-btn.teal-btn { background: var(--teal-dark); }
+.shop-btn.teal-btn:hover { background: var(--warm-dark) !important; }
+
+/* Intro comparison table */
+.diaper-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: .9rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px #c4755a12;
+}
+.diaper-table th {
+  background: var(--warm-dark);
+  color: var(--cream);
+  padding: .75rem 1rem;
+  text-align: left;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.diaper-table td {
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--terracotta-light);
+  color: #5c3d2c;
+  vertical-align: middle;
+}
+.diaper-table tr:last-child td { border-bottom: none; }
+.diaper-table tr:nth-child(even) td { background: var(--cream); }
+.diaper-table tr:nth-child(odd) td { background: var(--warm-white); }
+.star { color: var(--terracotta-dark); }
+.post-hero-image {
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, var(--terracotta-light), var(--teal-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== POST ===== -->
+  <div class="post-page">
+
+    <a href="category-all-things-baby.html" class="back-link">← All Things Baby</a>
+
+    <h1>Realistic Diaper Review &amp; Rankings</h1>
+    <p class="post-meta">All Things Baby &nbsp;·&nbsp; By Steph</p>
+
+    <div class="post-body">
+
+      <p>There's no single best diaper — I've tried all four of the big names and landed on this: it's an equation of value, fit, and occasion. The sizing piece alone is a game-changer. Huggies run smaller, Pampers run larger, and knowing that in-between size moment is when it really matters.</p>
+
+      <!-- QUICK COMPARISON TABLE -->
+      <table class="diaper-table">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Best For</th>
+            <th>Fit</th>
+            <th>Value</th>
+            <th>Blowout Protection</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pampers</strong></td>
+            <td>Everyday + value</td>
+            <td>Runs larger</td>
+            <td><span class="star">★★★★★</span></td>
+            <td><span class="star">★★★★</span>☆</td>
+          </tr>
+          <tr>
+            <td><strong>Coterie</strong></td>
+            <td>Occasions &amp; outfits</td>
+            <td>True to size</td>
+            <td><span class="star">★★</span>☆☆☆</td>
+            <td><span class="star">★★★</span>☆☆</td>
+          </tr>
+          <tr>
+            <td><strong>Huggies</strong></td>
+            <td>In-between sizes + blowouts</td>
+            <td>Runs smaller</td>
+            <td><span class="star">★★★★</span>☆</td>
+            <td><span class="star">★★★★★</span></td>
+          </tr>
+          <tr>
+            <td><strong>Kirkland</strong></td>
+            <td>Budget bulk buy</td>
+            <td>Runs looser</td>
+            <td><span class="star">★★★★★</span></td>
+            <td><span class="star">★★★★</span>☆</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ── PAMPERS ── -->
+      <div class="diaper-card">
+        <div class="diaper-card-header terracotta-header">
+          <span class="rank-badge">1</span>
+          <h2>Pampers Swaddlers</h2>
+          <span class="brand-tag">Best Value</span>
+        </div>
+        <div class="diaper-card-body">
+          <div class="terracotta-note">
+            🏅 My go-to everyday diaper — best dollar-per-diaper value without sacrificing quality.
+          </div>
+          <ul>
+            <li>Best dollar-per-diaper value — widely available and even cheaper with Subscribe &amp; Save</li>
+            <li>Incredibly soft against baby's skin</li>
+            <li>Runs on the <em>larger side</em> — good to know when sizing up</li>
+            <li>Great absorption without that super puffy, full look</li>
+          </ul>
+          <a href="https://www.amazon.com/Pampers-Swaddlers-Disposable-Diapers-SUPPLY/dp/B010OVZO64" target="_blank" rel="noopener" class="shop-btn">
+            Shop Pampers on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <!-- ── COTERIE ── -->
+      <div class="diaper-card teal-card">
+        <div class="diaper-card-header teal-header">
+          <span class="rank-badge">2</span>
+          <h2>Coterie</h2>
+          <span class="brand-tag">Best Occasion Diaper</span>
+        </div>
+        <div class="diaper-card-body">
+          <div class="highlight-note">
+            ✨ If money isn't a concern, these are my personal favorite — hands down the best absorption I've tried.
+          </div>
+          <ul>
+            <li>Best absorption I've tried — baby looks like she never went, even after going twice</li>
+            <li>Ultra-soft, apparel-grade materials — you can feel the quality difference</li>
+            <li>Non-toxic, plant-based, no parabens or fragrance</li>
+            <li>Not my top pick for blowouts compared to Huggies</li>
+            <li>Only sold in bulk — bigger upfront cost, but check your Amex for deals</li>
+          </ul>
+          <a href="https://www.amazon.com/Coterie-Size-Diapers-25-CT/dp/B09MXFZPVM" target="_blank" rel="noopener" class="shop-btn teal-btn">
+            Shop Coterie on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <!-- ── HUGGIES ── -->
+      <div class="diaper-card">
+        <div class="diaper-card-header terracotta-header">
+          <span class="rank-badge">3</span>
+          <h2>Huggies Little Snugglers</h2>
+          <span class="brand-tag">Best Blowout Protection</span>
+        </div>
+        <div class="diaper-card-body">
+          <div class="terracotta-note">
+            💡 Pro tip: Huggies run smaller — reach for these when the next Pampers size feels too big.
+          </div>
+          <ul>
+            <li>Rounded shape creates a better seal around baby's legs and back</li>
+            <li>Not as soft as Pampers or Coterie, but great for everyday</li>
+            <li>Best blowout protection of the bunch</li>
+            <li>Run smaller — a lifesaver when the next Pampers size feels too big and floppy</li>
+          </ul>
+          <a href="https://www.amazon.com/Huggies-Little-Snugglers-Diapers-Packaging/dp/B00KBM6KGA" target="_blank" rel="noopener" class="shop-btn">
+            Shop Huggies on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <!-- ── KIRKLAND ── -->
+      <div class="diaper-card">
+        <div class="diaper-card-header terracotta-header">
+          <span class="rank-badge">4</span>
+          <h2>Kirkland Signature</h2>
+          <span class="brand-tag">Best Budget Option</span>
+        </div>
+        <div class="diaper-card-body">
+          <ul>
+            <li>Cheapest option — solid for bulk buying at Costco</li>
+            <li>Good absorption, but the diaper looks more full and puffy after a wet</li>
+            <li>The fit feels off to me — always some bunching at the bottom, which looks awkward in outfits</li>
+            <li>Best saved for around-the-house days, not photo ops</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>The Bottom Line</h2>
+
+      <p>My real-life approach: Pampers as the everyday staple, Huggies when we're in the sizing gap or I'm bracing for a blowout, Coterie for anything cute or photo-worthy, and Kirkland when I just need to stock up without overthinking it. They all have a time and a place — promise.</p>
+
+      <p>— Steph</p>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>© 2025 The Steph F Edit · Made with love (and coffee)</p>
+  </footer>
+
+</body>
+</html>
