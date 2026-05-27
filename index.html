@@ -106,7 +106,48 @@ a { color: inherit; text-decoration: none; }
 }
 .home-hero h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.1; }
 .home-hero h1 em { color: var(--terracotta-dark); }
-.home-hero .tagline { color: var(--warm-mid); margin: 0 0 3rem; font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 400; }
+.home-hero .tagline { color: var(--warm-mid); margin: 0 0 2rem; font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 400; }
+
+/* HERO PHOTO */
+.hero-photo-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.hero-photo-wrap img {
+  width: 100%;
+  border-radius: 20px 20px 80px 20px;
+  display: block;
+  box-shadow: 0 12px 48px #c4755a2a;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+/* Placeholder shown until you add your photo */
+.hero-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 20px 20px 80px 20px;
+  background: #fff8f4;
+  border: 2px dashed var(--terracotta);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  color: var(--terracotta-dark);
+  box-shadow: 0 12px 48px #c4755a1a;
+}
+.hero-photo-placeholder svg { width: 40px; height: 40px; opacity: .4; }
+.hero-photo-placeholder p {
+  font-family: 'Nunito', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .6;
+  margin: 0;
+}
 
 /* SECTION CARDS (home) */
 .section-cards {
@@ -148,11 +189,18 @@ a { color: inherit; text-decoration: none; }
 }
 .section-card.teal-cta .card-cta { color: var(--teal-dark); }
 .section-card:hover .card-cta { gap: .75rem; }
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .nav-links { gap: 1.2rem; }
+  .site-nav .brand { font-size: 1.3rem; }
+  .hero-photo-wrap { max-width: 220px; }
+}
   </style>
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
+  <!-- NAV -->
   <nav class="site-nav">
     <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
     <ul class="nav-links">
@@ -163,16 +211,19 @@ a { color: inherit; text-decoration: none; }
     </ul>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="home-hero">
     <h1>Life, <em>Little Ones</em>,<br>& Everything in Between</h1>
     <p class="tagline">Motherhood Unfiltered</p>
+
+    <div class="hero-photo-wrap">
+      <img src="/callienewborn.jpeg" alt="Steph and Callie" />
+    </div>
   </section>
 
-  <!-- ===== SECTION CARDS ===== -->
+  <!-- SECTION CARDS -->
   <div class="section-cards">
 
-    <!-- About card -->
     <a href="about.html" class="section-card">
       <div class="section-card-accent terracotta"></div>
       <div class="section-card-body">
@@ -182,7 +233,6 @@ a { color: inherit; text-decoration: none; }
       </div>
     </a>
 
-    <!-- All Things Baby card -->
     <a href="category-all-things-baby.html" class="section-card teal-cta">
       <div class="section-card-accent teal"></div>
       <div class="section-card-body">
@@ -192,7 +242,6 @@ a { color: inherit; text-decoration: none; }
       </div>
     </a>
 
-    <!-- Fashion card -->
     <a href="category-fashion.html" class="section-card">
       <div class="section-card-accent mixed"></div>
       <div class="section-card-body">
@@ -202,7 +251,6 @@ a { color: inherit; text-decoration: none; }
       </div>
     </a>
 
-    <!-- Fitness card -->
     <a href="category-fitness.html" class="section-card teal-cta">
       <div class="section-card-accent teal"></div>
       <div class="section-card-body">
@@ -214,7 +262,7 @@ a { color: inherit; text-decoration: none; }
 
   </div>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <p>© 2026 The Steph F Edit</p>
   </footer>
