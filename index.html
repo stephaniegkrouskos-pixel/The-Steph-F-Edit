@@ -6,7 +6,7 @@
   <title>The Steph F Edit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
 :root {
   --terracotta: #e8a98a;
@@ -92,7 +92,7 @@ a { color: inherit; text-decoration: none; }
 /* HOME HERO */
 .home-hero {
   background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--teal-light) 100%);
-  padding: 5rem 2rem 5rem;
+  padding: 3.5rem 2rem; /* Reduced padding from 5rem to bring up the bottom sections */
   position: relative;
   overflow: hidden;
 }
@@ -106,12 +106,12 @@ a { color: inherit; text-decoration: none; }
 
 /* HERO FLEX CONTAINER */
 .hero-container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 3rem;
   position: relative;
   z-index: 1;
 }
@@ -123,24 +123,24 @@ a { color: inherit; text-decoration: none; }
 
 .home-hero h1 { 
   color: var(--warm-dark); 
-  margin: 0 0 1rem; 
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem); 
+  margin: 0 0 .75rem; 
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem); /* Slightly shrunk font sizes */
   line-height: 1.15; 
 }
 .home-hero h1 em { color: var(--terracotta-dark); }
-.home-hero .tagline { color: var(--warm-mid); margin: 0; font-family: 'Nunito', sans-serif; font-size: 1.25rem; font-weight: 400; }
+.home-hero .tagline { color: var(--warm-mid); margin: 0; font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 400; }
 
 /* HERO PHOTO */
 .hero-photo-wrap {
   flex-shrink: 0;
   width: 100%;
-  max-width: 360px;
+  max-width: 290px; /* Reduced picture size just a bit for a balanced desktop look */
 }
 .hero-photo-wrap img {
   width: 100%;
-  border-radius: 24px 24px 90px 24px;
+  border-radius: 20px 20px 80px 20px;
   display: block;
-  box-shadow: 0 16px 48px #c4755a33;
+  box-shadow: 0 12px 40px #c4755a2a;
   object-fit: cover;
   aspect-ratio: 3/4;
 }
@@ -148,7 +148,7 @@ a { color: inherit; text-decoration: none; }
 .hero-photo-placeholder {
   width: 100%;
   aspect-ratio: 3/4;
-  border-radius: 24px 24px 90px 24px;
+  border-radius: 20px 20px 80px 20px;
   background: #fff8f4;
   border: 2px dashed var(--terracotta);
   display: flex;
@@ -157,7 +157,7 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   gap: .75rem;
   color: var(--terracotta-dark);
-  box-shadow: 0 16px 48px #c4755a22;
+  box-shadow: 0 12px 40px #c4755a1a;
 }
 .hero-photo-placeholder svg { width: 40px; height: 40px; opacity: .4; }
 .hero-photo-placeholder p {
@@ -176,7 +176,7 @@ a { color: inherit; text-decoration: none; }
   gap: 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 3.5rem 2rem;
+  padding: 3rem 2rem;
   display: grid;
 }
 .section-card {
@@ -213,36 +213,42 @@ a { color: inherit; text-decoration: none; }
 
 /* RESPONSIVE */
 @media (max-width: 820px) {
+  .home-hero {
+    padding: 3rem 1.5rem 2.5rem; /* Tighter hero section for tablets */
+  }
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 3rem;
+    gap: 2rem;
   }
   .hero-text {
     text-align: center;
   }
   .hero-photo-wrap {
-    max-width: 300px;
+    max-width: 250px;
   }
 }
 
 /* MOBILE NAV & HEADER FIXES */
 @media (max-width: 640px) {
   .site-nav {
-    padding: 0 1rem; /* Extra breathing room on edges */
+    padding: 0 1rem;
   }
   .site-nav .brand { 
-    font-size: 1.15rem; /* Shrank logo so it doesn't wrap */
+    font-size: 1.15rem; 
   }
   .nav-links { 
-    gap: 0.75rem; /* Tighter gap between links to keep them on one line */
+    gap: 0.75rem; 
   }
   .nav-links a {
-    font-size: 0.7rem; /* Slightly smaller text for links */
+    font-size: 0.7rem; 
     letter-spacing: .06em;
   }
+  .home-hero h1 {
+    font-size: 1.8rem; /* Keeps header small enough to leave vertical space below */
+  }
   .hero-photo-wrap { 
-    max-width: 240px; 
+    max-width: 200px; /* Reduced on mobile so cards pop up onto the screen fold */
   }
 }
   </style>
@@ -253,7 +259,8 @@ a { color: inherit; text-decoration: none; }
     <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="category-all-things-baby.html">Baby</a></li> <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-all-things-baby.html">Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
       <li><a href="category-fitness.html">Fitness</a></li>
     </ul>
   </nav>
