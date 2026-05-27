@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pacifier Breastfeeding Moms Actually Need · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+
+/* POST PAGE */
+.post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
+.post-page .back-link {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.post-page .back-link:hover { gap: .6rem; }
+.post-page h1 { color: var(--warm-dark); margin: 0 0 .75rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+.post-page .post-meta { letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem; font-size: .8rem; font-weight: 600; }
+.post-page .post-body { color: #4a3020; font-size: 1.05rem; line-height: 1.85; }
+.post-page .post-body p { margin: 0 0 1.4rem; }
+.post-page .post-body h2 { color: var(--warm-dark); margin: 2rem 0 .75rem; font-size: 1.8rem; }
+
+.post-page .post-body a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-page .post-body a:hover { color: var(--teal-dark); }
+
+/* Product image */
+.product-img-wrap {
+  margin: 2rem 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--terracotta-light);
+  background: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 3px 20px #c4755a14;
+}
+.product-img-wrap img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Brand ranking cards */
+.paci-card {
+  background: var(--warm-white);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  box-shadow: 0 3px 20px #c4755a14;
+  border: 1px solid var(--terracotta-light);
+}
+.paci-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid var(--terracotta-light);
+}
+.paci-card-header.teal-header {
+  border-bottom-color: var(--teal-light);
+  background: linear-gradient(90deg, var(--teal-light) 0%, var(--warm-white) 100%);
+}
+.paci-card-header.terracotta-header {
+  background: linear-gradient(90deg, var(--terracotta-light) 0%, var(--warm-white) 100%);
+}
+.rank-badge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--terracotta-dark);
+  line-height: 1;
+  min-width: 2rem;
+}
+.teal-header .rank-badge { color: var(--teal-dark); }
+.paci-card-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--warm-dark);
+  line-height: 1.1;
+}
+.paci-card-header .brand-tag {
+  margin-left: auto;
+  font-size: .75rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 20px;
+  background: var(--terracotta-light);
+  color: var(--terracotta-dark);
+  white-space: nowrap;
+}
+.teal-header .brand-tag { background: var(--teal-light); color: var(--teal-dark); }
+.paci-card-body { padding: 1.5rem 1.75rem 1.75rem; }
+.paci-card-body ul {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.paci-card-body ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  color: #5c3d2c;
+  font-size: .97rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+.paci-card-body ul li::before {
+  content: "✦";
+  color: var(--terracotta);
+  font-size: .7rem;
+  margin-top: .35rem;
+  flex-shrink: 0;
+}
+.teal-card .paci-card-body ul li::before { color: var(--teal); }
+.paci-card-body .highlight-note {
+  background: linear-gradient(90deg, var(--teal-light), var(--cream));
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.paci-card-body .terracotta-note {
+  background: linear-gradient(90deg, var(--terracotta-light), var(--cream));
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--terracotta-dark);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--terracotta-dark);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .6rem 1.2rem;
+  border-radius: 30px;
+  transition: background .2s, transform .15s;
+}
+.shop-btn:hover { background: var(--warm-dark) !important; transform: translateY(-1px); }
+.shop-btn.teal-btn { background: var(--teal-dark); }
+.shop-btn.teal-btn:hover { background: var(--warm-dark) !important; }
+
+@media (max-width: 640px) {
+  .nav-links { gap: 1.2rem; }
+  .site-nav .brand { font-size: 1.3rem; }
+  .paci-card-header .brand-tag { display: none; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-page">
+
+    <a href="category-all-things-baby.html" class="back-link">← All Things Baby</a>
+
+    <h1>The Pacifier Breastfeeding Moms Actually Need</h1>
+    <p class="post-meta">All Things Baby &nbsp;·&nbsp; By Steph</p>
+
+    <div class="post-body">
+
+      <p>If you're breastfeeding, picking a pacifier isn't as simple as grabbing whatever's on the shelf. Nipple shape matters — a lot. An awkward paci can interfere with your baby's latch and make nursing harder, which is the last thing you need when you're already in the thick of it. I landed on two that I genuinely swear by: one for everyday calm, and one for those full-blown meltdown moments when nothing else would do.</p>
+
+      <!-- Ninni image -->
+      <div class="product-img-wrap">
+        <img src="ninni.webp" alt="Ninni Co breast-shaped pacifier in oatmeal" />
+      </div>
+
+      <div class="paci-card">
+        <div class="paci-card-header terracotta-header">
+          <span class="rank-badge">✦</span>
+          <h2>Ninni Co. Pacifier</h2>
+          <span class="brand-tag">The Meltdown Hack</span>
+        </div>
+        <div class="paci-card-body">
+          <div class="terracotta-note">
+            🍼 Lactation-consultant recommended &amp; truly shaped like a breast — our secret weapon for overtired meltdowns.
+          </div>
+          <ul>
+            <li>My lactation consultant recommended this specifically for breastfeeding moms — and she was right</li>
+            <li>The nipple is literally shaped and sized like a breast, which means baby latches the same way she would on you</li>
+            <li>Made from 100% medical-grade silicone — soft, flexible, and designed to collapse just like real skin when baby sucks</li>
+            <li>Designed in the USA with dental health in mind; the round base supports healthy oral development</li>
+            <li>When our daughter was truly melting down — overtired, overstimulated, inconsolable — this was the only thing that worked like magic</li>
+            <li>Worth every penny for those moments; it went from a "maybe" to a non-negotiable in our house fast</li>
+            <li>Only sold in smaller packs, so stock up — you'll want a few on rotation</li>
+          </ul>
+          <a href="https://ninnico.com/collections/pacifiers" target="_blank" rel="noopener" class="shop-btn">
+            Shop Ninni Co →
+          </a>
+        </div>
+      </div>
+
+      <p>I want to be honest: the Ninni wasn't our everyday paci. It's very soft — some babies need a little time to figure out how to keep it in on their own. But for those moments when nothing else was cutting it? Absolute game changer. Zero to calm in seconds. Worth every penny.</p>
+
+      <!-- Soothie image -->
+      <div class="product-img-wrap">
+        <img src="soothie.webp" alt="Philips Avent Soothie pacifiers in blue" />
+      </div>
+
+      <div class="paci-card teal-card">
+        <div class="paci-card-header teal-header">
+          <span class="rank-badge">✦</span>
+          <h2>Philips Avent Soothie</h2>
+          <span class="brand-tag">Our Everyday Favorite</span>
+        </div>
+        <div class="paci-card-body">
+          <div class="highlight-note">
+            ✨ The hospital paci — and for good reason. Easy for baby to keep in, easy for you to clean.
+          </div>
+          <ul>
+            <li>This is the pacifier hospitals hand out to newborns across the country — there's a reason it's the default</li>
+            <li>Made from one seamless piece of BPA-free, medical-grade silicone — no hidden crevices, no parts to come apart, no worries</li>
+            <li>The nipple is straight and symmetrical, mimicking a real nipple shape so it's still breastfeeding-friendly</li>
+            <li>Super easy for baby to keep in — she could hold it without much effort from the start, which made it our daily go-to</li>
+            <li>Approved by the American Academy of Pediatrics for its one-piece construction — the safest design on the market</li>
+            <li>Dishwasher safe and easy to sterilize by boiling — just drop it in with your other gear</li>
+            <li>The finger-hold design is a fun bonus: you can slip your finger into the nipple to help baby suckle, which is great for bonding</li>
+            <li>Affordable, widely available, and comes in cute colors — practical doesn't have to mean boring</li>
+          </ul>
+          <a href="https://www.amazon.com/Philips-AVENT-Pacifier-SCF190-41/dp/B07TDN9MKC/" target="_blank" rel="noopener" class="shop-btn teal-btn">
+            Shop Soothie on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <p>The Soothie is still the pacifier I reach for first. It's practical, it's trusted, and our daughter took to it easily. IBCLCs recommend it specifically because the straight silicone nipple doesn't interfere with breastfeeding the way orthodontic or shaped pacifiers can — baby uses the same sucking motion either way.</p>
+
+      <h2>How We Used Both</h2>
+
+      <p>Our system was simple: Soothie for everyday soothing — car rides, fussiness, settling down at naptime. Ninni for the real moments — overtired screaming, that specific cry where nothing is working and you're about to cry yourself. Keep both in your rotation. They serve completely different purposes and together they cover just about every situation you'll actually face.</p>
+
+      <p>If you're breastfeeding and haven't tried a breast-shaped paci yet, start with one Ninni pack before committing — every baby is different and the softness is an adjustment. But if it clicks for your baby the way it did for ours, you'll be ordering the four-pack before the week is out.</p>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
