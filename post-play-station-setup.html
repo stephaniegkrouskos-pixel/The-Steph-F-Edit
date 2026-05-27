@@ -8,10 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-/* ================================================
-   THE STEPH F EDIT — Shared Styles
-   ================================================ */
-
 :root {
   --terracotta: #e8a98a;
   --terracotta-light: #f2d4c4;
@@ -25,9 +21,7 @@
   --warm-mid: #8c6654;
   --muted: #b89b8e;
 }
-
 * { box-sizing: border-box; }
-
 body {
   background-color: var(--cream);
   color: var(--warm-dark);
@@ -35,16 +29,12 @@ body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
 }
-
 h1, h2, h3, h4 {
   letter-spacing: .01em;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
 }
-
 a { color: inherit; text-decoration: none; }
-
-/* NAV */
 .site-nav {
   background: var(--warm-white);
   border-bottom: 1px solid var(--terracotta-light);
@@ -80,8 +70,6 @@ a { color: inherit; text-decoration: none; }
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--terracotta-dark); }
-
-/* FOOTER */
 .site-footer {
   background: var(--warm-dark);
   color: #ffffff8c;
@@ -92,8 +80,6 @@ a { color: inherit; text-decoration: none; }
   font-size: .82rem;
 }
 .site-footer a { color: var(--terracotta-light); text-decoration: none; }
-
-/* POST PAGE */
 .post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
 .post-page .back-link {
   letter-spacing: .1em;
@@ -150,11 +136,10 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 420px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 22%;  /* shifted down from "top" to show the full playpen */
   display: block;
 }
 
-/* INLINE PHOTO */
 .inline-photo {
   width: 100%;
   border-radius: 14px;
@@ -179,8 +164,6 @@ a { color: inherit; text-decoration: none; }
   background: var(--warm-white);
   letter-spacing: .02em;
 }
-
-/* PRODUCT CARDS */
 .product-card {
   background: var(--warm-white);
   border-radius: 18px;
@@ -290,11 +273,7 @@ a { color: inherit; text-decoration: none; }
 .shop-btn:hover { background: var(--warm-dark) !important; transform: translateY(-1px); }
 .shop-btn.teal-btn { background: var(--teal-dark); }
 .shop-btn.teal-btn:hover { background: var(--warm-dark) !important; }
-
-/* CON TAG */
 .con-item::before { color: var(--muted) !important; content: "✗" !important; font-size: .8rem !important; }
-
-/* RESPONSIVE */
 @media (max-width: 640px) {
   .nav-links { gap: 1.2rem; }
   .site-nav .brand { font-size: 1.3rem; }
@@ -350,7 +329,6 @@ a { color: inherit; text-decoration: none; }
 
       <p>With those in mind, here's what I found and actually use every day.</p>
 
-      <!-- PLAYPEN -->
       <div class="product-card">
         <div class="product-card-header terracotta-header">
           <h2>The Playpen: Wooden Extra-Large Baby Playpen</h2>
@@ -373,7 +351,6 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <!-- PLAY MAT -->
       <div class="product-card teal-card">
         <div class="product-card-header teal-header">
           <h2>The Mat: House of Noa Little Nomad Play Mat</h2>
