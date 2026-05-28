@@ -96,6 +96,7 @@ a { color: inherit; text-decoration: none; }
 .post-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px #c4755a24; }
 .post-card-image { aspect-ratio: 16/9; background: linear-gradient(135deg, var(--terracotta-light), var(--teal-light)); justify-content: center; align-items: center; display: flex; overflow: hidden; }
 .post-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.post-card-image img.full-photo { object-fit: contain; background: #fff; }
 .post-card-image svg { opacity: .3; width: 40px; height: 40px; color: var(--warm-mid); }
 .post-card-body { flex-direction: column; flex: 1; padding: 1.5rem; display: flex; }
 .post-card-date { letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; font-size: .75rem; font-weight: 600; }
@@ -162,9 +163,9 @@ a { color: inherit; text-decoration: none; }
       </div>
     </a>
 
-    <a href="swaddlessackssuits.html" class="post-card">
+    <a href="./swaddlessackssuits.html" class="post-card">
       <div class="post-card-image">
-        <img src="calliemerlin.jpeg" alt="Baby in Baby Merlin's Magic Sleepsuit">
+        <img src="calliemerlin.jpeg" alt="Baby in Baby Merlin's Magic Sleepsuit" class="full-photo">
       </div>
       <div class="post-card-body">
         <h3>Swaddles, Sacks &amp; Suits: What Actually Gets Baby to Sleep</h3>
