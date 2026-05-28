@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postpartum Workout Essentials · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+
+.post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
+.post-page .back-link {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.post-page .back-link:hover { gap: .6rem; }
+.post-page h1 { color: var(--warm-dark); margin: 0 0 .75rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+.post-page .post-meta { letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem; font-size: .8rem; font-weight: 600; }
+.post-page .post-body { color: #4a3020; font-size: 1.05rem; line-height: 1.85; }
+.post-page .post-body p { margin: 0 0 1.4rem; }
+.post-page .post-body h2 { color: var(--warm-dark); margin: 2.5rem 0 .75rem; font-size: 1.8rem; }
+.post-page .post-body a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-page .post-body a:hover { color: var(--teal-dark); }
+
+/* Product image */
+.product-img-wrap {
+  margin: 0 0 1.1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.product-img-wrap img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Equipment cards */
+.equip-card {
+  background: var(--warm-white);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 2rem 0;
+  box-shadow: 0 3px 20px #c4755a14;
+  border: 1px solid var(--terracotta-light);
+}
+.equip-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.75rem;
+  border-bottom: 1px solid var(--terracotta-light);
+  background: linear-gradient(90deg, var(--terracotta-light) 0%, var(--warm-white) 100%);
+}
+.equip-card-header.teal-header {
+  background: linear-gradient(90deg, var(--teal-light) 0%, var(--warm-white) 100%);
+  border-bottom-color: var(--teal-light);
+}
+.equip-card-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--warm-dark);
+  line-height: 1.1;
+}
+.equip-card-header .brand-tag {
+  margin-left: auto;
+  font-size: .75rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 20px;
+  background: var(--terracotta-light);
+  color: var(--terracotta-dark);
+  white-space: nowrap;
+}
+.teal-header .brand-tag { background: var(--teal-light); color: var(--teal-dark); }
+.equip-card-body { padding: 1.25rem 1.75rem 1.5rem; }
+.equip-card-body p {
+  color: #5c3d2c;
+  font-size: .97rem;
+  line-height: 1.7;
+  margin: 0 0 1.1rem;
+  font-family: 'Nunito', sans-serif;
+}
+.equip-card-body p:last-child { margin-bottom: 0; }
+
+/* Highlight notes */
+.highlight-note {
+  background: linear-gradient(90deg, var(--teal-light), var(--cream));
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+.terracotta-note {
+  background: linear-gradient(90deg, var(--terracotta-light), var(--cream));
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--terracotta-dark);
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+
+/* Shop button */
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--terracotta-dark);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .6rem 1.2rem;
+  border-radius: 30px;
+  transition: background .2s, transform .15s;
+}
+.shop-btn:hover { background: var(--warm-dark) !important; transform: translateY(-1px); }
+.shop-btn.teal-btn { background: var(--teal-dark); }
+.shop-btn.teal-btn:hover { background: var(--warm-dark) !important; }
+
+/* FORM app highlight */
+.form-card {
+  background: var(--warm-white);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  box-shadow: 0 3px 20px #7bbfba22;
+  border: 1px solid var(--teal-light);
+}
+.form-card-header {
+  padding: 1.2rem 1.75rem;
+  border-bottom: 1px solid var(--teal-light);
+  background: linear-gradient(90deg, var(--teal-light) 0%, var(--warm-white) 100%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.form-card-header h3 { margin: 0; font-size: 1.4rem; color: var(--warm-dark); }
+.form-card-header .brand-tag { margin-left: auto; font-size: .75rem; font-family: 'Nunito', sans-serif; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 20px; background: var(--teal-light); color: var(--teal-dark); white-space: nowrap; }
+.form-card-body { padding: 1.25rem 1.75rem 1.5rem; }
+.form-card-body p { color: #5c3d2c; font-size: .97rem; line-height: 1.7; margin: 0 0 1.1rem; font-family: 'Nunito', sans-serif; }
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+  .equip-card-header .brand-tag { display: none; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-page">
+
+    <a href="category-fitness.html" class="back-link">← Fitness</a>
+
+    <h1>Postpartum Workout Essentials</h1>
+    <p class="post-meta">Fitness &nbsp;·&nbsp; By Steph</p>
+
+    <div class="post-body">
+
+      <p>Physical health is my mental health — that's just always been true for me. So getting back to moving my body as soon as I safely could after labor wasn't optional, it was necessary. Between a newborn's schedule, sleep deprivation, and a body that just did something incredible, figuring out <em>how</em> to actually do that took some trial and error.</p>
+
+      <p>What I landed on: a handful of affordable at-home pieces and one app that genuinely changed everything. I'll do a more detailed post on my favorite exercises from weeks 0–6, but this one is focused on week 6 and beyond — when you're cleared and ready to actually push it.</p>
+
+      <p>The equipment list below is not complicated, and that's the point. Heavy focus on resistance and barre training — this exact setup got me into some of the best shape of my life. No gym membership required.</p>
+
+      <h2>The Equipment</h2>
+
+      <div class="equip-card">
+        <div class="equip-card-header">
+          <h3>Yoga Mat — Readaeer Foldable</h3>
+          <span class="brand-tag">The Foundation</span>
+        </div>
+        <div class="equip-card-body">
+          <div class="product-img-wrap">
+            <img src="yoga_mat.jpg" alt="Readaeer foldable yoga mat with carrying bag" />
+          </div>
+          <div class="terracotta-note">🧘 I specifically love how this one folds, looks, and feels — it checks every box.</div>
+          <p>A good mat is non-negotiable, and this one wins on all three things I care about: it folds flat so it stores anywhere, the TPE material feels soft and grippy at the same time, and honestly it just looks nice. Double-sided anti-slip means it stays put on any floor, and it comes with its own carrying bag. For the price, there's nothing I'd swap it for.</p>
+          <a href="https://www.amazon.com/READAEER-Foldable-Carrying-Non-Slip-Exercise/dp/B0CW2VZ8RL/" target="_blank" rel="noopener" class="shop-btn">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="equip-card teal-card">
+        <div class="equip-card-header teal-header">
+          <h3>Bala Bangles</h3>
+          <span class="brand-tag">The Burner</span>
+        </div>
+        <div class="equip-card-body">
+          <div class="product-img-wrap">
+            <img src="bala_bangles.webp" alt="Bala Bangles weighted cuffs in multiple colors" />
+          </div>
+          <div class="highlight-note">🔥 Wear them for an entire workout and feel the difference immediately.</div>
+          <p>These need no explanation if you know, you know. Bala Bangles are weighted cuffs that strap to your wrists or ankles and make every single movement harder without changing what you're doing. During barre, pilates, or any floor work, they add constant low-level resistance that burns in the best possible way. The 1 lb weights sound like nothing — strap them on for 30 minutes and report back.</p>
+          <a href="https://www.amazon.com/Bala-8887048743-1-Lb-Weights/dp/B0BQCJRL6Q/" target="_blank" rel="noopener" class="shop-btn teal-btn">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-card-header">
+          <h3>Booty Bands</h3>
+          <span class="brand-tag">Glutes & Hips</span>
+        </div>
+        <div class="equip-card-body">
+          <div class="product-img-wrap">
+            <img src="bootybands.jpg" alt="Renoj booty resistance bands set in three resistance levels" />
+          </div>
+          <div class="terracotta-note">💪 A full glute and hip workout in a $15 set of bands you can take anywhere.</div>
+          <p>Resistance bands are one of the most underrated postpartum tools. They rebuild hip and glute strength — exactly what your body needs after pregnancy — without putting stress on joints that are still recovering. This set comes in multiple resistance levels so you can progress as you get stronger. I use these in almost every lower body session.</p>
+          <a href="https://www.amazon.com/Renoj-Booty-Exercise-Resistance-Levels/dp/B087R2Q4HM/" target="_blank" rel="noopener" class="shop-btn">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="equip-card teal-card">
+        <div class="equip-card-header teal-header">
+          <h3>Adjustable 2–5 lb Weights</h3>
+          <span class="brand-tag">Upper Body</span>
+        </div>
+        <div class="equip-card-body">
+          <div class="highlight-note">✨ One twist adjusts the weight — no swapping out dumbbells mid-workout.</div>
+          <p>For postpartum upper body work, you don't need to go heavy. Light weights with high reps and controlled movement is where the magic is, especially paired with barre-style training. These adjustable ones go from 2 to 5 lbs with a single twist, so they grow with you as you rebuild strength. The non-slip handle is a nice touch when you're sweaty mid-workout.</p>
+          <a href="https://www.amazon.com/kure-fit-Adjustable-Women/dp/B0DNMNZ9KK/" target="_blank" rel="noopener" class="shop-btn teal-btn">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <h2>The Workout Plan</h2>
+
+      <p>Equipment is only half of it. The other half — the part that actually made me feel like myself again — was finding the right program. And I found it.</p>
+
+      <div class="form-card">
+        <div class="form-card-header">
+          <h3>The FORM App</h3>
+          <span class="brand-tag">The Best Money I Spent</span>
+        </div>
+        <div class="form-card-body">
+          <div class="product-img-wrap">
+            <img src="theformapp.webp" alt="The FORM app trainers" />
+          </div>
+          <div class="highlight-note">⭐ Not an ad. Not affiliated. Just genuinely can't stop raving about this app.</div>
+          <p>Start with the postpartum program — it's designed specifically for where your body is right now, and it progresses exactly as fast as you need it to. Once you're through it, the rest of the app opens up, and that's where Grace's workouts come in. Her vibe is everything. She will burn you out in the best way possible in whatever short window of time you have.</p>
+          <p>This app fixed a 3-inch diastasis. I look the best I have looked in my entire life. I'm not being dramatic — I genuinely could go on and on. It is the single best money I spent postpartum, full stop.</p>
+          <a href="https://joinform.com/" target="_blank" rel="noopener" class="shop-btn teal-btn">Check Out FORM →</a>
+        </div>
+      </div>
+
+      <p>That's the full setup. A mat, two kinds of weights, a set of bands, and one app subscription. That's it. You don't need a gym, a babysitter, or an hour of uninterrupted time. You need 20–30 minutes on your living room floor and these tools — and it will work.</p>
+
+      <p>Stay tuned for my next post on exactly what I was doing from weeks 0–6, before being cleared for full workouts.</p>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
