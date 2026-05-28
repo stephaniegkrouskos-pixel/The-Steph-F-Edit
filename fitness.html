@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+
+.category-header {
+  background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--cream) 60%);
+  text-align: center;
+  border-bottom: 1px solid var(--terracotta-light);
+  padding: 4rem 2rem 3rem;
+}
+.category-header h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(2.2rem, 5vw, 3.8rem); }
+.category-header p { color: var(--warm-mid); margin: 0; font-size: 1rem; }
+
+.posts-grid {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+}
+.post-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 14px #c4755a12;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px #c4755a24; }
+.post-card-image {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--terracotta-light), var(--teal-light));
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+.post-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.post-card-body { flex-direction: column; flex: 1; padding: 1.5rem; display: flex; }
+.post-card-date { letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; font-size: .75rem; font-weight: 600; }
+.post-card h3 { color: var(--warm-dark); margin: 0 0 .6rem; font-size: 1.4rem; line-height: 1.25; }
+.post-card p { color: var(--warm-mid); flex: 1; margin: 0; font-size: .9rem; line-height: 1.65; }
+
+.coming-soon-card {
+  background: var(--warm-white);
+  text-align: center;
+  border: 2px dashed var(--terracotta-light);
+  color: var(--muted);
+  border-radius: 14px;
+  padding: 3rem 2rem;
+}
+.coming-soon-card h3 { color: var(--warm-mid); margin: 0 0 .5rem; font-size: 1.6rem; }
+.coming-soon-card p { margin: 0; font-size: .9rem; }
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="category-header">
+    <h1>Fitness</h1>
+    <p>Postpartum movement and workout recs.</p>
+  </div>
+
+  <div class="posts-grid">
+
+    <!-- PASTE NEW POST CARDS HERE — copy the block below and fill in your details:
+
+    <a href="your-post-filename.html" class="post-card">
+      <div class="post-card-image">
+        <img src="your-cover-photo.jpg" alt="Description of photo">
+      </div>
+      <div class="post-card-body">
+        <h3>Your Post Title</h3>
+        <p>A one or two sentence description of the post.</p>
+      </div>
+    </a>
+
+    -->
+
+    <div class="coming-soon-card">
+      <h3>Posts coming soon</h3>
+      <p>Check back — this space is ready and waiting.</p>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
