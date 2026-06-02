@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Blackout Tents: A Complete Game-Changer · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+a { color: inherit; text-decoration: none; }
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+.post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
+.post-page .back-link {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.post-page .back-link:hover { gap: .6rem; }
+.post-page h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+.post-page .post-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--warm-mid);
+  margin: 0 0 1.2rem;
+  line-height: 1.4;
+}
+.post-page .post-meta {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.post-page .post-body { color: #4a3020; font-size: 1.05rem; line-height: 1.85; }
+.post-page .post-body p { margin: 0 0 1.4rem; }
+.post-page .post-body h2 { color: var(--warm-dark); margin: 2rem 0 .75rem; font-size: 1.8rem; }
+.post-page .post-body a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-page .post-body a:hover { color: var(--teal-dark); }
+
+.product-card {
+  background: var(--warm-white);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  box-shadow: 0 3px 20px #c4755a14;
+  border: 1px solid var(--terracotta-light);
+}
+.product-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid var(--terracotta-light);
+}
+.product-card-header.teal-header {
+  border-bottom-color: var(--teal-light);
+  background: linear-gradient(90deg, var(--teal-light) 0%, var(--warm-white) 100%);
+}
+.product-card-header.terracotta-header {
+  background: linear-gradient(90deg, var(--terracotta-light) 0%, var(--warm-white) 100%);
+}
+.product-card-header.muted-header {
+  background: linear-gradient(90deg, #ede8e4 0%, var(--warm-white) 100%);
+  border-bottom-color: #ddd5ce;
+}
+.product-card-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--warm-dark);
+  line-height: 1.1;
+}
+.product-card-header .brand-tag {
+  margin-left: auto;
+  font-size: .75rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 20px;
+  background: var(--terracotta-light);
+  color: var(--terracotta-dark);
+  white-space: nowrap;
+}
+.teal-header .brand-tag { background: var(--teal-light); color: var(--teal-dark); }
+.muted-header .brand-tag { background: #ddd5ce; color: var(--warm-mid); }
+.product-card-body { padding: 1.5rem 1.75rem 1.75rem; }
+.product-card-body ul {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.product-card-body ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  color: #5c3d2c;
+  font-size: .97rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+.product-card-body ul li::before {
+  content: "✦";
+  color: var(--terracotta);
+  font-size: .7rem;
+  margin-top: .35rem;
+  flex-shrink: 0;
+}
+.teal-card .product-card-body ul li::before { color: var(--teal); }
+.muted-card .product-card-body ul li::before { color: var(--muted); }
+.product-card-body .highlight-note {
+  background: linear-gradient(90deg, var(--teal-light), var(--cream));
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.product-card-body .terracotta-note {
+  background: linear-gradient(90deg, var(--terracotta-light), var(--cream));
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--terracotta-dark);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.product-card-body .muted-note {
+  background: linear-gradient(90deg, #ede8e4, var(--cream));
+  border-left: 3px solid var(--muted);
+  border-radius: 0 10px 10px 0;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--warm-mid);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--terracotta-dark);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .6rem 1.2rem;
+  border-radius: 30px;
+  transition: background .2s, transform .15s;
+}
+.shop-btn:hover { background: var(--warm-dark) !important; transform: translateY(-1px); }
+.shop-btn.teal-btn { background: var(--teal-dark); }
+.shop-btn.teal-btn:hover { background: var(--warm-dark) !important; }
+.shop-btn.muted-btn { background: var(--warm-mid); }
+.shop-btn.muted-btn:hover { background: var(--warm-dark) !important; }
+.con-item::before { color: var(--muted) !important; content: "✗" !important; font-size: .8rem !important; }
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  background: var(--terracotta-light);
+  color: var(--terracotta-dark);
+}
+.teal-header .rank-badge { background: var(--teal-light); color: var(--teal-dark); }
+.muted-header .rank-badge { background: #ddd5ce; color: var(--warm-mid); }
+@media (max-width: 640px) {
+  .nav-links { gap: 1.2rem; }
+  .site-nav .brand { font-size: 1.3rem; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-page">
+
+    <a href="category-all-things-baby.html" class="back-link">← All Things Baby</a>
+
+    <h1>Baby Blackout Tents: A Complete Game-Changer</h1>
+    <p class="post-subtitle">The product that actually gives your baby their own room — anywhere</p>
+    <p class="post-meta">All Things Baby &nbsp;·&nbsp; By Steph</p>
+
+    <div class="post-body">
+
+      <p>I'll be honest — when someone first told me to look into baby blackout sleep tents, I almost didn't. The price felt insane for what looked like, I don't know, a glorified canopy. Then we traveled with our daughter for the first time and I got it immediately.</p>
+
+      <p>These things are a lifesaver. Whether you're at a hotel, at the in-laws', or just have people over and need the house to still function like a house — your baby has her own room wherever she goes. We were also genuinely shocked by how much noise they block, which isn't something people talk about enough. Combined with the darkness, it's the closest thing to actually replicating her nursery that we've found.</p>
+
+      <p>Here's how the three main options compare.</p>
+
+      <div class="product-card">
+        <div class="product-card-header terracotta-header">
+          <span class="rank-badge">1</span>
+          <h2>SlumberPod</h2>
+          <span class="brand-tag">#1 Pick</span>
+        </div>
+        <div class="product-card-body">
+          <div class="terracotta-note">
+            The one that keeps coming up — because it actually does what it says.
+          </div>
+          <ul>
+            <li>Four ventilation panels, two fan pockets, a monitor pocket — the details are all there</li>
+            <li>Independently tested for CO2 safety, which I didn't know to look for until I went down the rabbit hole on these</li>
+            <li>The newer version includes a fan, which matters</li>
+            <li>Fits over most travel cribs and pack n plays and packs down small enough that it's not a whole thing to travel with</li>
+            <li>Sleep consultants recommend it constantly — and once you use it you understand why</li>
+            <li>One thing I didn't expect: it seemed to help with our four month sleep regression. I don't know if it was the darkness or just that she felt so cozy and enclosed in her own little space, but something about it clicked for her. Could be coincidence, but I'm not willing to test that theory.</li>
+          </ul>
+          <a href="https://www.amazon.com/SlumberPod-3-0-Portable-Blackout-Sleeping/dp/B0B7PBRZX5/ref=sr_1_1_sspa?crid=4BT8RECZYNGB&dib=eyJ2IjoiMSJ9.P3wMaelaEKtD0njJcguh2qOtJtAyqyOUE2adndFwb_UBVnIDBpX33V9Zvn5EMf9f_101gFCb2dJDSn5trlR5h-OhmYDdf8qq7DnMqz_sRllXW77R1A88XVLn1Sw31tuuFrrm3rXibdYE_GJ5yQLX8P7_pVQvfefqDNU96rkpOb3VA0oN8CfUSSEXPlo2opOqxlgO2j5ksIzb2ZJbOP0ibMKxnxD6nCtpWXKqRznFRAHOdDkgOul9aNA8LgzavHWIVdOkVDRObcy3wkGk0eclVhTe7fRzPUliZXVQ0uaFyqA.BEsiTKM_EEvJ9lev05k9vWZ_yFAM4y6NYTzL3p8jgFE&dib_tag=se&keywords=slumber%2Bpod&qid=1780422910&s=home-garden&sprefix=slumber%2Bpod%2Cgarden%2C130&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" target="_blank" rel="noopener" class="shop-btn">
+            Shop on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card teal-card">
+        <div class="product-card-header teal-header">
+          <span class="rank-badge">2</span>
+          <h2>Hiccapop Daydreamer</h2>
+          <span class="brand-tag">#2 Pick</span>
+        </div>
+        <div class="product-card-body">
+          <div class="highlight-note">
+            A close second and a real contender.
+          </div>
+          <ul>
+            <li>Six air vents and color-coded clips that make setup pretty intuitive</li>
+            <li>Comes with a lifetime guarantee that covers accidental damage — which honestly surprised me, I didn't expect that</li>
+            <li>The carry bag fits in a suitcase, which is a nice detail</li>
+            <li class="con-item">Blocks about 90% of light versus 95%+ on the SlumberPod — you do notice the difference</li>
+            <li class="con-item">Fan isn't included, which feels like an oversight at this price</li>
+          </ul>
+          <a href="https://www.amazon.com/hiccapop-Daydreamer-Blackout-Tent-Parent/dp/B0DTFNM4SN" target="_blank" rel="noopener" class="shop-btn teal-btn">
+            Shop on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card muted-card">
+        <div class="product-card-header muted-header">
+          <span class="rank-badge">3</span>
+          <h2>YABORAS</h2>
+          <span class="brand-tag">#3 Pick</span>
+        </div>
+        <div class="product-card-body">
+          <div class="muted-note">
+            If budget is the deciding factor, this is the one.
+          </div>
+          <ul>
+            <li>The one-click setup is genuinely the easiest of the three — takes about two minutes once you figure out the folding</li>
+            <li>Ventilation is decent and the materials feel fine</li>
+            <li class="con-item">Not fully blackout — the fabric leans more breathable than truly dark, so you get dim rather than pitch black</li>
+            <li class="con-item">Doesn't have the same safety certifications or track record as the other two</li>
+          </ul>
+          <a href="https://www.amazon.com/Blackout-One-Click-Assembly-Breathable-Toddlers/dp/B0DDTFTP5H" target="_blank" rel="noopener" class="shop-btn muted-btn">
+            Shop on Amazon →
+          </a>
+        </div>
+      </div>
+
+      <p>If you're going to get one, get the SlumberPod. We use ours every time we travel and honestly more at home than I expected.</p>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
