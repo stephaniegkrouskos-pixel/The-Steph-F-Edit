@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diaper Pails — Secrets Revealed · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+/* Post layout */
+.post-header {
+  background: linear-gradient(135deg, var(--teal-light) 0%, var(--cream) 60%);
+  border-bottom: 1px solid var(--teal-light);
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+.post-header .category-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.post-header h1 {
+  color: var(--warm-dark);
+  margin: 0 auto .75rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  max-width: 780px;
+  line-height: 1.15;
+}
+.post-header .subtitle {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.post-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+.post-body p {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+/* Pail sections */
+.pail-section {
+  margin: 3rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.pail-section.avoid {
+  border: 2px solid var(--terracotta-light);
+  box-shadow: none;
+}
+
+.pail-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+}
+
+.pail-content {
+  padding: 2rem 2rem 1.5rem;
+}
+
+.pail-rank {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.pail-rank.rank-1 { color: var(--teal-dark); }
+.pail-rank.rank-2 { color: var(--warm-mid); }
+.pail-rank.rank-avoid { color: var(--terracotta-dark); }
+
+.pail-content h2 {
+  color: var(--warm-dark);
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.pail-content p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+.shop-link {
+  display: inline-block;
+  background: var(--teal-dark);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .65rem 1.4rem;
+  border-radius: 8px;
+  margin-top: .25rem;
+  transition: background .2s;
+  text-decoration: none;
+}
+.shop-link:hover { background: var(--teal); }
+
+.pail-section.avoid .shop-link {
+  background: var(--muted);
+}
+.pail-section.avoid .shop-link:hover { background: var(--warm-mid); }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 3rem 0;
+}
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+  .post-body { padding: 2.5rem 1.25rem 4rem; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-header">
+    <p class="category-label">All Things Baby</p>
+    <h1>Diaper Pails — Secrets Revealed! The Biggest Brand Name Is Actually the Worst One</h1>
+    <p class="subtitle">Nobody talks about diaper pails until you're standing in a nursery that smells terrible. I've used them all. Here's what you need to know.</p>
+  </div>
+
+  <div class="post-body">
+
+    <div class="pail-section">
+      <div class="pail-image">
+        <img src="munchkin.jpg" alt="Munchkin Step Diaper Pail">
+      </div>
+      <div class="pail-content">
+        <p class="pail-rank rank-1">#1 — The Winner</p>
+        <h2>Munchkin Step</h2>
+        <p>The foot pedal matters more than you think. When you have a baby in one arm, not touching the lid is the difference between a functional product and an annoying one. The carbon filter actually controls odor — not just masks it. The refill cartridges are widely available and reasonably priced. It works. It keeps doing its job. There is no learning curve and no unpleasant surprises six months in.</p>
+        <a class="shop-link" href="https://www.amazon.com/Munchkin%C2%AE-Powered-Control-Award-Winning-Cartridge/dp/B01BDQDIGM/ref=sr_1_4?crid=1VMTHF4KI9NV8&dib=eyJ2IjoiMSJ9.pd8fOydmMWYrC5zbhN1kIRA_C3rFngVidji_BwElL45qK7_7ZHxcFxYjFzhYTkPYoW_rncv6U_EfeqOff5A8cxHT-YSZjS5pvPps7RPq7j0JiSw8oGnCJvJ4khpGu-EqCxX2SgOOaYbxKTYppBeTHbv7qZKLcbpm8lEei-9G1qtdGBTCWuGQmbk4TAiF9VQaWM-lhUWKjF_VqdxyrxIzTh5ADbwMQbn8TOK9k_GeyVS2W3cXxLqe9fhf1Jb1VBAc91g0jvwP9-j_HvJDwQDv3GbvpEmqxECbseFhMAuq1mU.flAWdkYMgPHhtohY5pvfUzeC3En0Yf3n1g0dILM8xoA&dib_tag=se&keywords=munchkin%2Bdiaper%2Bpail&qid=1780423681&s=home-garden&sprefix=munchkin%2Bdiaper%2Bpail%2Cgarden%2C135&sr=1-4&th=1" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <div class="pail-section">
+      <div class="pail-image">
+        <img src="diaper_genie.webp" alt="Diaper Genie">
+      </div>
+      <div class="pail-content">
+        <p class="pail-rank rank-2">#2 — Decent, With a Catch</p>
+        <h2>Diaper Genie</h2>
+        <p>It has been around for decades for a reason. The individual diaper sealing mechanism is effective and the odor control is reliable. The problem is the refills — proprietary, recurring, and expensive over time. If you already own one or receive it as a gift, use it. It will do the job. It is just not the one I would choose if I were starting from scratch.</p>
+        <a class="shop-link" href="https://www.amazon.com/Playtex-Registry-Complete-Refills-Filters/dp/B07CFLYWGM/ref=sr_1_1?crid=1EXI7WEAHZH3T&dib=eyJ2IjoiMSJ9.CannHx4MyGI0C-nJy5vnMgqGdiHHkqpSJ6eQIHS1NIi-q-XiJpSnITaYJs0FsjxyRF7HNhqtDrG6y08_RD10EfvtAzDwlYOcwMLI83DJk2UAwfNKQ1Ez_p5CLIUEG1gDX-5uY2I_CfrR0AZkAc88IjaTPA27b7FtolBmV8S3csk0jW9RbcXIo7DV04tX8ZyYuRGbIVEupP5JpDdoNUgshozJmrQ-MEoRzycgo4uxdNF-gb0PgDjYIfWQuYWQ8kByGpVzZioDK-Ssa-x2kyPqdj4uo-2w.zmagMVCcBER8-7crGvjB-PuYmyyhwoVDM8CdFVSfT2A&dib_tag=se&keywords=diaper%2Bgenie&qid=1780423753&s=home-garden&sprefix=diaper%2Bgeni%2Cgarden%2C136&sr=1-1&th=1" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="pail-section avoid">
+      <div class="pail-image">
+        <img src="ubbi.webp" alt="Ubbi Diaper Pail">
+      </div>
+      <div class="pail-content">
+        <p class="pail-rank rank-avoid">Avoid</p>
+        <h2>Ubbi</h2>
+        <p>The design looks good. That is the only positive thing I will say. Every mother I know who bought one regrets it. The sliding lid does not seal properly. The odor control fails quickly. It fills up faster than the size suggests it should. The appeal of using regular trash bags instead of proprietary refills sounds practical on paper — in reality you are trading a minor inconvenience for a smelly nursery. Do not buy it.</p>
+        <a class="shop-link" href="https://www.amazon.com/Ubbi-Required-Awards-Winning-Registry-Must-Have/dp/B00821FLT4/ref=sr_1_1?crid=3CUS885DYB33D&dib=eyJ2IjoiMSJ9.39XbuRrIromVLZg2hWiHMJAlv44BRkY5Tfr1mD13t1Z0fyhCYlb0zCADvJQfcfDWucEpXaHyh2qgjtstK3GzBUAnVyG53Nb-DXlLYT6RMzpu01DZxRyqF2XfVXG31woLooCmv4q-4j20TesEa36zwRHkeP2qY_-2QhIYs69DDQqP3ooUj_RU3aHzdSyPQlDf6zaBCP5IOtQ_oC6cIbetVYpbzkGcYYCd83nBjojZ3KjhBCTkxC2wQLcdIMcsb71aP8Zms6X4Nh43-jGojsKujw4IMpvWwWsv6Lhz9QoBM.S3v6Je9fjvgLWGA_jJsjvqd4iLg&dib_tag=se&keywords=ubbi&qid=1780423774&s=home-garden&sprefix=ubbi%2Cgarden%2C133&sr=1-1&th=1" target="_blank" rel="noopener">See on Amazon</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
