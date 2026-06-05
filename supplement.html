@@ -79,9 +79,37 @@ a { color: inherit; text-decoration: none; }
 .post-header {
   background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--cream) 60%);
   border-bottom: 1px solid var(--terracotta-light);
-  text-align: center;
   padding: 4rem 2rem 3rem;
 }
+
+/* Added container for side-by-side title and image layout */
+.header-flex-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: left;
+}
+
+.header-text-column {
+  flex: 1;
+}
+
+.header-image-column {
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.header-image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #c4755a15;
+  display: block;
+}
+
 .post-header .category-label {
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -92,16 +120,14 @@ a { color: inherit; text-decoration: none; }
 }
 .post-header h1 {
   color: var(--warm-dark);
-  margin: 0 auto .75rem;
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  max-width: 780px;
+  margin: 0 0 .75rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.15;
 }
 .post-header .subtitle {
   color: var(--warm-mid);
   font-size: 1rem;
-  margin: 0 auto;
-  max-width: 600px;
+  margin: 0;
   line-height: 1.7;
 }
 
@@ -279,6 +305,18 @@ a { color: inherit; text-decoration: none; }
   font-size: .82rem;
 }
 
+@media (max-width: 768px) {
+  .header-flex-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .header-image-column {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 @media (max-width: 640px) {
   .site-nav { padding: 0 1rem; height: 60px; }
   .nav-links { gap: 0.75rem; }
@@ -302,9 +340,16 @@ a { color: inherit; text-decoration: none; }
   </nav>
 
   <div class="post-header">
-    <p class="category-label">All Things Baby</p>
-    <h1>Baby Supplements — I Can Promise We Spent the MOST Time Researching This One!</h1>
-    <p class="subtitle">My husband and I are extremely health-conscious and extremely picky with supplements. We couldn't help but feel like even the pediatricians just recommend the big name brands without explanation. So we went deep. Here is what we found.</p>
+    <div class="header-flex-container">
+      <div class="header-text-column">
+        <p class="category-label">All Things Baby</p>
+        <h1>Baby Supplements — I Can Promise We Spent the MOST Time Researching This One!</h1>
+        <p class="subtitle">My husband and I are extremely health-conscious and extremely picky with supplements. We couldn't help but feel like even the pediatricians just recommend the big name brands without explanation. So we went deep. Here is what we found.</p>
+      </div>
+      <div class="header-image-column">
+        <img src="supplementphoto.jpeg" alt="Baby Supplements">
+      </div>
+    </div>
   </div>
 
   <div class="post-body">
