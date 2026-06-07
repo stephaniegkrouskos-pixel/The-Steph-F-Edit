@@ -140,4 +140,257 @@ a { color: inherit; text-decoration: none; }
 .post-body > p {
   color: var(--warm-mid);
   font-size: 1rem;
-  line-height
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+.supp-section {
+  margin: 3rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.supp-content {
+  padding: 2rem 2rem 1.5rem;
+}
+
+.supp-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+  color: var(--teal-dark);
+}
+
+.supp-label.honorary {
+  color: var(--warm-mid);
+}
+
+.supp-content h2 {
+  color: var(--warm-dark);
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.supp-content p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0 0 1.2rem;
+}
+
+.supp-content p:last-of-type {
+  margin-bottom: 1.4rem;
+}
+
+.callout {
+  background: var(--terracotta-light);
+  border-left: 3px solid var(--terracotta-dark);
+  border-radius: 0 8px 8px 0;
+  padding: .85rem 1.1rem;
+  margin: 0 0 1.4rem;
+  color: var(--warm-dark);
+  font-size: .93rem;
+  line-height: 1.7;
+}
+
+.callout strong {
+  color: var(--terracotta-dark);
+}
+
+.shop-link {
+  display: inline-block;
+  background: var(--teal-dark);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .65rem 1.4rem;
+  border-radius: 8px;
+  margin-top: .25rem;
+  transition: background .2s;
+  text-decoration: none;
+}
+.shop-link:hover { background: var(--teal); }
+
+.supp-divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 0 2rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 3rem 0;
+}
+
+/* Probiotics split layout */
+.probiotic-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.probiotic-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: 0 2px 18px #c4755a10;
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.probiotic-card h3 {
+  color: var(--warm-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  margin: 0 0 .75rem;
+  font-weight: 400;
+}
+
+.probiotic-card p {
+  color: var(--warm-mid);
+  font-size: .93rem;
+  line-height: 1.75;
+  margin: 0 0 1.1rem;
+  flex: 1;
+}
+
+.probiotic-card .callout {
+  font-size: .88rem;
+}
+
+.probiotic-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--warm-mid);
+  margin-bottom: .35rem;
+}
+
+.probiotic-label.star {
+  color: var(--teal-dark);
+}
+
+.intro-box {
+  background: var(--warm-white);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.intro-box p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+
+/* Super small disclosure formatting at the bottom */
+.footer-disclosure {
+  font-size: 0.68rem;
+  color: #ffffff55;
+  max-width: 600px;
+  margin: 1rem auto 0;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .header-flex-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .header-image-column {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+  .post-body { padding: 2.5rem 1.25rem 4rem; }
+  .probiotic-pair { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-header">
+    <div class="header-flex-container">
+      <div class="header-text-column">
+        <p class="category-label">All Things Baby</p>
+        <h1>Baby Supplements — I Can Promise We Spent the MOST Time Researching This One!</h1>
+        <p class="subtitle">My husband and I are extremely health-conscious and extremely picky with supplements. We couldn't help but feel like even the pediatricians just recommend the big name brands without explanation. So we went deep. Here is what we found.</p>
+      </div>
+      <div class="header-image-column">
+        <img src="supplementphoto.jpeg" alt="Baby Supplements">
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Start From Day One</p>
+        <h2>Vitamin D</h2>
+        <p>Here is a fact that does not get communicated clearly enough: breast milk does not contain sufficient vitamin D. Formula is fortified with it, but if you are breastfeeding, your baby is almost certainly not getting enough. The American Academy of Pediatrics recommends that all breastfed infants receive 400 IU of vitamin D3 daily, beginning within the first few days of life.</p>
+        <p>The product we use is <strong>Carlson Baby's Super Daily D3</strong>. Each bottle delivers exactly 400 IU — the AAP's recommended daily intake — in a single drop. One drop. The company has been third-party testing every product with an FDA-registered laboratory since 1965. It is unflavored, colorless, and made with nothing but vitamin D3 in a medium-chain triglyceride oil base. No sugar, no artificial colors, no fillers. The bottle contains 365 drops — a full year's supply. Drop it on your nipple before nursing, add it to a bottle, or place it directly on baby's tongue. There is no resistance and no aftertaste.</p>
+        <a class="shop-link" href="https://www.amazon.com/dp/B003BVIBMO/?tag=thestephfedit-20" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Critical After 6 Months</p>
+        <h2>Iron</h2>
+        <p>Babies are born with iron stores accumulated during the third trimester of pregnancy. Those stores are sufficient for roughly the first four to six months of life. After that, breast milk — which contains only about 0.2 to 0.4 mg of iron per liter — cannot come close to meeting a growing infant's needs. After six months, babies need approximately 11 mg of iron per day. Breast milk delivers a fraction of that. Iron deficiency at this stage is not a minor concern: it directly affects hemoglobin production, brain development, and cognitive function. You cannot reliably close this gap through food alone, especially in the early months of introducing solids.</p>
+        <p>The problem with most baby iron supplements is tolerability. Ferrous sulfate — the form found in standard pediatric drops — is notorious for causing constipation, dark stools, and a metallic taste that babies fight tooth and nail. <strong>Legendairy Milk Organic Iron Drops</strong> use polysaccharide iron complex instead. This form is significantly gentler on digestion, far less likely to cause constipation, and has excellent absorption. The formula is enhanced with vitamin C, which further improves iron uptake. USDA Certified Organic, Non-GMO Project Verified, vegan, Kosher, and Halal. No sugar, no artificial colors, no preservatives. The cherry flavor is organic. Babies actually take it without a fight.</p>
+        <a class="shop-link" href="https://www.amazon.com/dp/B0FCPF9SM7/?tag=thestephfedit-20" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Constantly Overlooked</p>
+        <h2>Fish Oil</h2>
+        <p>DHA is the dominant structural fatty acid in the human brain. The brain roughly doubles in size during the first year of life, and DHA is critical for visual development and healthy nervous system formation. Breast milk contains DHA, but the concentration varies significantly based on maternal diet. Even formula-fortified DHA is often in a less absorbable ethyl-ester form rather than the triglyceride form naturally found in fish. The reality is that an estimated 99% of children receive no omega-3 supplementation regularly. This is a gap worth closing.</p>
+        <p><strong>Nordic Naturals Baby's DHA</strong> is the standard for a reason. It is the Official Baby's Omega-3 of the American Pregnancy Association. Each 5 mL serving delivers 1,050 mg of total omega-3s sourced from 100% wild Arctic cod, plus 30
