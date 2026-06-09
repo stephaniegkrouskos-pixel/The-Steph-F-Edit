@@ -140,56 +140,34 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
-.inline-photo {
-  width: 100%;
-  border-radius: 14px;
+/* FLOAT LEFT PHOTO */
+.float-photo {
+  float: left;
+  width: 210px;
+  margin: 0.2rem 1.6rem 1rem 0;
+  border-radius: 12px;
   overflow: hidden;
-  margin: 2rem 0;
-  box-shadow: 0 3px 18px #c4755a12;
+  box-shadow: 0 3px 16px #c4755a14;
   border: 1px solid var(--terracotta-light);
+  flex-shrink: 0;
 }
-.inline-photo img {
+.float-photo img {
   width: 100%;
-  height: 360px;
-  object-fit: cover;
-  object-position: center 35%;
-  display: block;
-}
-.inline-photo figcaption {
-  padding: .7rem 1.2rem;
-  font-size: .8rem;
-  color: var(--muted);
-  font-style: italic;
-  font-family: 'Cormorant Garamond', serif;
-  background: var(--warm-white);
-  letter-spacing: .02em;
-}
-
-.inline-photo-small {
-  border-radius: 14px;
-  overflow: hidden;
-  margin: 1.5rem 0;
-  box-shadow: 0 3px 18px #c4755a12;
-  border: 1px solid var(--terracotta-light);
-  display: inline-block;
-  width: 240px;
-}
-.inline-photo-small img {
-  width: 100%;
-  height: 240px;
+  height: 210px;
   object-fit: cover;
   object-position: center;
   display: block;
 }
-.inline-photo-small figcaption {
-  padding: .5rem .9rem;
-  font-size: .78rem;
+.float-photo figcaption {
+  padding: .45rem .8rem;
+  font-size: .76rem;
   color: var(--muted);
   font-style: italic;
   font-family: 'Cormorant Garamond', serif;
   background: var(--warm-white);
   letter-spacing: .02em;
 }
+.clearfix::after { content: ""; display: table; clear: both; }
 
 /* SHOP THE LIST CARD */
 .product-card {
@@ -206,8 +184,6 @@ a { color: inherit; text-decoration: none; }
   gap: 1.2rem;
   padding: 1.4rem 1.75rem;
   border-bottom: 1px solid var(--terracotta-light);
-}
-.product-card-header.terracotta-header {
   background: linear-gradient(90deg, var(--terracotta-light) 0%, var(--warm-white) 100%);
 }
 .product-card-header h2 {
@@ -254,7 +230,8 @@ a { color: inherit; text-decoration: none; }
   .nav-links { gap: 1.2rem; }
   .site-nav .brand { font-size: 1.3rem; }
   .cover-photo img { height: 260px; }
-  .inline-photo img { height: 240px; }
+  .float-photo { float: none; width: 100%; margin: 0 0 1.2rem; }
+  .float-photo img { height: 220px; }
 }
   </style>
 </head>
@@ -286,40 +263,44 @@ a { color: inherit; text-decoration: none; }
 
       <p>Every new turn you cross with a baby feels like another leap into the unknown — solids was genuinely my biggest stressor of them all. I don't know why, because it honestly hasn't been that hard, but I built so much anxiety around it. Here's a quick guide on the minimalist things you need to at least get running with purées.</p>
 
-      <p>The first thing I'll say: skip the <a href="https://amzn.to/4uZeC4W" target="_blank" rel="noopener">baby food maker</a>. I know they look appealing, and I was tempted — but my mom friends talked me out of it, and they were right. Purées are a short phase before babies start needing more texture anyway, so you're buying something that only makes small batches for a window that passes fast.</p>
+      <div class="clearfix">
+        <figure class="float-photo">
+          <img src="babyfoodmaker.jpg" alt="Baby food maker machine" />
+          <figcaption>Looks useful. Skip it.</figcaption>
+        </figure>
+        <p>The first thing I'll say: skip the <a href="https://amzn.to/4uZeC4W" target="_blank" rel="noopener">baby food maker</a>. I know they look appealing, and I was tempted — but my mom friends talked me out of it, and they were right. Purées are a short phase before babies start needing more texture anyway, so you're buying something that only makes small batches for a window that passes fast.</p>
+      </div>
 
-      <figure class="inline-photo-small">
-        <img src="babyfoodmaker.jpg" alt="Baby food maker machine" />
-        <figcaption>Looks useful. Skip it.</figcaption>
-      </figure>
+      <div class="clearfix">
+        <figure class="float-photo">
+          <img src="steamerbasket.jpg" alt="Stainless steel veggie steaming basket" />
+          <figcaption>Simple, cheap, all you need.</figcaption>
+        </figure>
+        <p>What you actually need is a simple <a href="https://amzn.to/4dXoiXI" target="_blank" rel="noopener">veggie steaming basket</a> and a pot with a lid. Most people already have a pot, but if you don't, <a href="https://amzn.to/4v1cEkM" target="_blank" rel="noopener">this one</a> is cheap and does the trick. Fill it with 1–2 inches of water, drop in the basket and your veggies, bring to a boil with the lid on, and you'll have perfectly steamed vegetables in minutes. From there, just use whatever blender you already have at home — I used a Vitamix for larger batches and a NutriBullet for smaller ones. Add a little water or breast milk and blend to your desired consistency. That's genuinely it.</p>
+      </div>
 
-      <p>What you actually need is a simple <a href="https://amzn.to/4dXoiXI" target="_blank" rel="noopener">veggie steaming basket</a> and a pot with a lid. Most people already have a pot, but if you don't, <a href="https://amzn.to/4v1cEkM" target="_blank" rel="noopener">this one</a> is cheap and does the trick. Fill it with 1–2 inches of water, drop in the basket and your veggies, bring to a boil with the lid on, and you'll have perfectly steamed vegetables in minutes. From there, just use whatever blender you already have at home — I used a Vitamix for larger batches and a NutriBullet for smaller ones. Add a little water or breast milk and blend to your desired consistency. That's genuinely it.</p>
+      <div class="clearfix">
+        <figure class="float-photo">
+          <img src="glassjar.jpg" alt="Small glass baby food storage jars with colorful lids" />
+          <figcaption>Get the smaller pack. You won't need twelve.</figcaption>
+        </figure>
+        <p>For storage, I keep things simple: <a href="https://amzn.to/4ebmBVj" target="_blank" rel="noopener">small glass jars</a> for the fridge and <a href="https://amzn.to/4oeu7U1" target="_blank" rel="noopener">freezer trays</a> for anything I want to keep longer. One note — I'd skip the 12-pack of jars. Purées only last so long in the fridge, and I've never needed more than six at a time.</p>
+      </div>
 
-      <figure class="inline-photo">
-        <img src="steamerbasket.jpg" alt="Stainless steel veggie steaming basket" />
-        <figcaption>The steaming basket — simple, cheap, and all you really need.</figcaption>
-      </figure>
-
-      <p>For storage, I keep things simple: <a href="https://amzn.to/4ebmBVj" target="_blank" rel="noopener">small glass jars</a> for the fridge and <a href="https://amzn.to/4oeu7U1" target="_blank" rel="noopener">freezer trays</a> for anything I want to keep longer. One note — I'd skip the 12-pack of jars. Purées only last so long in the fridge, and I've never needed more than six at a time.</p>
-
-      <figure class="inline-photo">
-        <img src="glassjar.jpg" alt="Small glass baby food storage jars with colorful lids" />
-        <figcaption>The glass jars — get the smaller pack. You won't need twelve.</figcaption>
-      </figure>
-
-      <p>The last thing, and honestly a non-negotiable for me: <a href="https://amzn.to/3QvEVkf" target="_blank" rel="noopener">long-sleeve bibs</a>. All praise to the moms who can handle the shirtless, food-everywhere chaos at mealtime — but that's not me. I needed some semblance of order. I only bought two to save money and it's been totally manageable. These go on before every single meal.</p>
-
-      <figure class="inline-photo-small">
-        <img src="bib.jpg" alt="Long-sleeve rainbow print bib" />
-        <figcaption>The bib. Non-negotiable.</figcaption>
-      </figure>
+      <div class="clearfix">
+        <figure class="float-photo">
+          <img src="bib.jpg" alt="Long-sleeve rainbow print bib" />
+          <figcaption>The bib. Non-negotiable.</figcaption>
+        </figure>
+        <p>The last thing, and honestly a non-negotiable for me: <a href="https://amzn.to/3QvEVkf" target="_blank" rel="noopener">long-sleeve bibs</a>. All praise to the moms who can handle the shirtless, food-everywhere chaos at mealtime — but that's not me. I needed some semblance of order. I only bought two to save money and it's been totally manageable. These go on before every single meal.</p>
+      </div>
 
       <p>Oh, and <a href="https://amzn.to/4xiEfze" target="_blank" rel="noopener">these spoons</a> have been great too — soft enough for new eaters and easy for little hands to grab onto.</p>
 
       <p>This is almost exactly everything that was in my Amazon cart at 5 months as I was gearing up to start purées, and it turned out to be everything I needed. Hoping it saves any moms in the same boat some time figuring out what to actually get — because the mental load of researching all of this when you're already sleep-deprived is real.</p>
 
       <div class="product-card">
-        <div class="product-card-header terracotta-header">
+        <div class="product-card-header">
           <h2>Shop the List</h2>
         </div>
         <div class="product-card-body">
