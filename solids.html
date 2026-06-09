@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>It's Time to Start Solids — Where to Begin? · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+a { color: inherit; text-decoration: none; }
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+.post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
+.post-page .back-link {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.post-page .back-link:hover { gap: .6rem; }
+.post-page h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+.post-page .post-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--warm-mid);
+  margin: 0 0 1.2rem;
+  line-height: 1.4;
+}
+.post-page .post-meta {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.post-page .post-body { color: #4a3020; font-size: 1.05rem; line-height: 1.85; }
+.post-page .post-body p { margin: 0 0 1.4rem; }
+.post-page .post-body h2 { color: var(--warm-dark); margin: 2rem 0 .75rem; font-size: 1.8rem; }
+.post-page .post-body a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-page .post-body a:hover { color: var(--teal-dark); }
+
+/* COVER PHOTO */
+.cover-photo {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 28px #c4755a18;
+  border: 1px solid var(--terracotta-light);
+}
+.cover-photo img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.inline-photo {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 2rem 0;
+  box-shadow: 0 3px 18px #c4755a12;
+  border: 1px solid var(--terracotta-light);
+}
+.inline-photo img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.inline-photo figcaption {
+  padding: .7rem 1.2rem;
+  font-size: .8rem;
+  color: var(--muted);
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  background: var(--warm-white);
+  letter-spacing: .02em;
+}
+
+.inline-photo-small {
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 3px 18px #c4755a12;
+  border: 1px solid var(--terracotta-light);
+  display: inline-block;
+  width: 240px;
+}
+.inline-photo-small img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.inline-photo-small figcaption {
+  padding: .5rem .9rem;
+  font-size: .78rem;
+  color: var(--muted);
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  background: var(--warm-white);
+  letter-spacing: .02em;
+}
+
+/* SHOP THE LIST CARD */
+.product-card {
+  background: var(--warm-white);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  box-shadow: 0 3px 20px #c4755a14;
+  border: 1px solid var(--terracotta-light);
+}
+.product-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid var(--terracotta-light);
+}
+.product-card-header.terracotta-header {
+  background: linear-gradient(90deg, var(--terracotta-light) 0%, var(--warm-white) 100%);
+}
+.product-card-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--warm-dark);
+  line-height: 1.1;
+}
+.product-card-body { padding: 1.5rem 1.75rem 1.75rem; }
+.product-card-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.product-card-body ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  color: #5c3d2c;
+  font-size: .97rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+.product-card-body ul li::before {
+  content: "✦";
+  color: var(--terracotta);
+  font-size: .7rem;
+  margin-top: .35rem;
+  flex-shrink: 0;
+}
+.product-card-body ul li a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+  font-weight: 600;
+}
+.product-card-body ul li a:hover { color: var(--teal-dark); }
+
+@media (max-width: 640px) {
+  .nav-links { gap: 1.2rem; }
+  .site-nav .brand { font-size: 1.3rem; }
+  .cover-photo img { height: 260px; }
+  .inline-photo img { height: 240px; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-page">
+
+    <a href="category-all-things-baby.html" class="back-link">← All Things Baby</a>
+
+    <h1>It's Time to Start Solids — Where to Begin?</h1>
+    <p class="post-subtitle">A minimalist guide to getting started with purées</p>
+    <p class="post-meta">All Things Baby &nbsp;·&nbsp; By Steph</p>
+
+    <div class="cover-photo">
+      <img src="callie_solids.jpg" alt="Baby in high chair eating purée from a glass jar" />
+    </div>
+
+    <div class="post-body">
+
+      <p>Every new turn you cross with a baby feels like another leap into the unknown — solids was genuinely my biggest stressor of them all. I don't know why, because it honestly hasn't been that hard, but I built so much anxiety around it. Here's a quick guide on the minimalist things you need to at least get running with purées.</p>
+
+      <p>The first thing I'll say: skip the <a href="https://amzn.to/4uZeC4W" target="_blank" rel="noopener">baby food maker</a>. I know they look appealing, and I was tempted — but my mom friends talked me out of it, and they were right. Purées are a short phase before babies start needing more texture anyway, so you're buying something that only makes small batches for a window that passes fast.</p>
+
+      <figure class="inline-photo-small">
+        <img src="babyfoodmaker.jpg" alt="Baby food maker machine" />
+        <figcaption>Looks useful. Skip it.</figcaption>
+      </figure>
+
+      <p>What you actually need is a simple <a href="https://amzn.to/4dXoiXI" target="_blank" rel="noopener">veggie steaming basket</a> and a pot with a lid. Most people already have a pot, but if you don't, <a href="https://amzn.to/4v1cEkM" target="_blank" rel="noopener">this one</a> is cheap and does the trick. Fill it with 1–2 inches of water, drop in the basket and your veggies, bring to a boil with the lid on, and you'll have perfectly steamed vegetables in minutes. From there, just use whatever blender you already have at home — I used a Vitamix for larger batches and a NutriBullet for smaller ones. Add a little water or breast milk and blend to your desired consistency. That's genuinely it.</p>
+
+      <figure class="inline-photo">
+        <img src="steamerbasket.jpg" alt="Stainless steel veggie steaming basket" />
+        <figcaption>The steaming basket — simple, cheap, and all you really need.</figcaption>
+      </figure>
+
+      <p>For storage, I keep things simple: <a href="https://amzn.to/4ebmBVj" target="_blank" rel="noopener">small glass jars</a> for the fridge and <a href="https://amzn.to/4oeu7U1" target="_blank" rel="noopener">freezer trays</a> for anything I want to keep longer. One note — I'd skip the 12-pack of jars. Purées only last so long in the fridge, and I've never needed more than six at a time.</p>
+
+      <figure class="inline-photo">
+        <img src="glassjar.jpg" alt="Small glass baby food storage jars with colorful lids" />
+        <figcaption>The glass jars — get the smaller pack. You won't need twelve.</figcaption>
+      </figure>
+
+      <p>The last thing, and honestly a non-negotiable for me: <a href="https://amzn.to/3QvEVkf" target="_blank" rel="noopener">long-sleeve bibs</a>. All praise to the moms who can handle the shirtless, food-everywhere chaos at mealtime — but that's not me. I needed some semblance of order. I only bought two to save money and it's been totally manageable. These go on before every single meal.</p>
+
+      <figure class="inline-photo-small">
+        <img src="bib.jpg" alt="Long-sleeve rainbow print bib" />
+        <figcaption>The bib. Non-negotiable.</figcaption>
+      </figure>
+
+      <p>Oh, and <a href="https://amzn.to/4xiEfze" target="_blank" rel="noopener">these spoons</a> have been great too — soft enough for new eaters and easy for little hands to grab onto.</p>
+
+      <p>This is almost exactly everything that was in my Amazon cart at 5 months as I was gearing up to start purées, and it turned out to be everything I needed. Hoping it saves any moms in the same boat some time figuring out what to actually get — because the mental load of researching all of this when you're already sleep-deprived is real.</p>
+
+      <div class="product-card">
+        <div class="product-card-header terracotta-header">
+          <h2>Shop the List</h2>
+        </div>
+        <div class="product-card-body">
+          <ul>
+            <li><a href="https://amzn.to/4dXoiXI" target="_blank" rel="noopener">Veggie steaming basket</a></li>
+            <li><a href="https://amzn.to/4v1cEkM" target="_blank" rel="noopener">Pot with lid</a></li>
+            <li><a href="https://amzn.to/4ebmBVj" target="_blank" rel="noopener">Small glass jars</a></li>
+            <li><a href="https://amzn.to/4oeu7U1" target="_blank" rel="noopener">Freezer trays</a></li>
+            <li><a href="https://amzn.to/3QvEVkf" target="_blank" rel="noopener">Long-sleeve bibs</a></li>
+            <li><a href="https://amzn.to/4xiEfze" target="_blank" rel="noopener">Baby spoons</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+    <p style="margin-top: .75rem; font-size: .78rem; color: #ffffff55; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6;">Disclosure: This post contains affiliate links. As an Amazon Associate I earn from qualifying purchases, at no extra cost to you.</p>
+  </footer>
+
+</body>
+</html>
