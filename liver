@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Chicken Liver is the Ultimate Superfood for Baby · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+.post-header {
+  background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--cream) 60%);
+  border-bottom: 1px solid var(--terracotta-light);
+  padding: 4rem 2rem 3rem;
+}
+
+.header-flex-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: left;
+}
+
+.header-text-column {
+  flex: 1;
+}
+
+.header-image-column {
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.header-image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #c4755a15;
+  display: block;
+}
+
+.post-header .category-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.post-header h1 {
+  color: var(--warm-dark);
+  margin: 0 0 .75rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+}
+.post-header .subtitle {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.post-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+.post-body > p {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+.supp-section {
+  margin: 3rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.supp-content {
+  padding: 2rem 2rem 1.5rem;
+}
+
+.supp-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+  color: var(--teal-dark);
+}
+
+.supp-label.honorary {
+  color: var(--warm-mid);
+}
+
+.supp-content h2 {
+  color: var(--warm-dark);
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.supp-content p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0 0 1.2rem;
+}
+
+.supp-content p:last-of-type {
+  margin-bottom: 1.4rem;
+}
+
+.callout {
+  background: var(--terracotta-light);
+  border-left: 3px solid var(--terracotta-dark);
+  border-radius: 0 8px 8px 0;
+  padding: .85rem 1.1rem;
+  margin: 0 0 1.4rem;
+  color: var(--warm-dark);
+  font-size: .93rem;
+  line-height: 1.7;
+}
+
+.callout strong {
+  color: var(--terracotta-dark);
+}
+
+.shop-link {
+  display: inline-block;
+  background: var(--teal-dark);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .65rem 1.4rem;
+  border-radius: 8px;
+  margin-top: .25rem;
+  transition: background .2s;
+  text-decoration: none;
+}
+.shop-link:hover { background: var(--teal); }
+
+/* Class for images within supp-sections (benefit cards) */
+.image-block {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin: 1.5rem auto 1.5rem;
+}
+
+.recipe-list {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  margin: 0 0 1.4rem;
+}
+
+.recipe-list li {
+  margin-bottom: 0.5rem;
+}
+
+.supp-divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 0 2rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 3rem 0;
+}
+
+.intro-box {
+  background: var(--warm-white);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.intro-box p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer .affiliate-disclosure {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .header-flex-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .header-image-column {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+  .post-body { padding: 2.5rem 1.25rem 4rem; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-header">
+    <div class="header-flex-container">
+      <div class="header-text-column">
+        <p class="category-label">All Things Baby</p>
+        <h1>The Ultimate Nutrient Powerhouse for Baby: Why Chicken Liver Deserves a Place on the Plate</h1>
+        <p class="subtitle">When it comes to introducing solids, we often default to simple fruit and veggie purées. But if you want to give your baby an absolute biological powerhouse, it's time to talk about an ingredient traditional cultures have valued for centuries: chicken liver.</p>
+      </div>
+      <div class="header-image-column">
+        <img src="patepic.webp" alt="Chicken Liver Pâté for Baby">
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+
+    <div class="intro-box">
+      <p>For a baby transitioning to solid foods, every single bite counts. Their little tummies can only hold so much, but their nutritional demands are sky-high—especially for brain and blood development. Chicken liver acts like nature's multivitamin, providing an exceptionally dense array of minerals and vitamins in small, easily absorbed amounts.</p>
+    </div>
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Preventing the 6-Month Dip</p>
+        <h2>Heme Iron</h2>
+        <p>Around six months of age, a baby’s natural in-utero iron stores begin to drop. Since breast milk is naturally low in iron, infants rely heavily on complementary foods to bridge this gap. Iron is absolutely critical for producing hemoglobin, tracking oxygen through the body, and supporting neurological development.</p>
+        <p>Chicken liver is loaded with highly bioavailable <strong>heme iron</strong>. Unlike the iron found in plant sources (like spinach or lentils), heme iron is incredibly easy for your baby's delicate digestive system to absorb directly, ensuring they hit their cognitive and physical milestones smoothly.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">The Brain Builder</p>
+        <h2>Choline</h2>
+        <p>While DHA gets a ton of well-deserved attention, choline is an unsung hero of early brain growth. Choline plays an indispensable role in forming cellular membranes, supporting neurotransmitters, and laying the groundwork for lifelong memory and learning capacities.</p>
+        <p>Chicken liver stands out as one of the richest whole-food sources of choline on the planet, making it an incredible functional choice during periods of rapid neurological expansion.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Nature's Multivitamin</p>
+        <h2>Zinc &amp; Vital B-Vitamins</h2>
+        <p>Beyond iron and choline, chicken liver offers a full spectrum of foundational micronutrients that support a thriving immune system and healthy growth:</p>
+        <ul class="recipe-list">
+          <li><strong>Zinc:</strong> Essential for cellular repair, wound healing, and building a robust immune response.</li>
+          <li><strong>Vitamin B12 &amp; Folate:</strong> Critical components for DNA synthesis, optimal cell energy, and the healthy creation of red blood cells.</li>
+          <li><strong>High-Quality Protein:</strong> Provides all essential amino acids necessary for muscle development.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section" style="background: #faf6f2; border: 1px solid var(--terracotta-light);">
+      <div class="supp-content">
+        <p class="supp-label" style="color: var(--terracotta-dark);">Important Safety Standard</p>
+        <h2>⚠️ The Golden Rule: Only Once Per Week</h2>
+        <p>Because chicken liver is extraordinarily rich, it is highly concentrated in fat-soluble <strong>Vitamin A (Retinol)</strong>. Vitamin A is wonderful for vision and cell turnover, but since it accumulates in the body, babies can get too much of it if served daily.</p>
+        <div class="callout">
+          <strong>How to serve safely:</strong> To maximize all the magnificent benefits without any excess, simply limit chicken liver to <strong>once a week</strong>. A single serving of about 1 to 2 tablespoons is the perfect sweet spot for your baby's weekly routine.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Parenting Hack</p>
+        <h2>Batch Cooking &amp; Non-Toxic Storage</h2>
+        <p>Since this superfood is purely a once-a-week addition to the plate, cooking a double batch is the smartest move you can make. It saves you immense preparation time and ensures a perfectly proportioned serving is always accessible.</p>
+        
+        <img src="chickenliver.jpg" alt="Raw Chicken Liver" class="image-block">
+
+        <p>To store your fresh purée safely, portion the extra pâté directly into partitioned <a href="https://amzn.to/4v3Lb1C" target="_blank" style="text-decoration:underline; font-weight:600; color:var(--teal-dark);">silicone freezer cubes</a>. Once they are frozen solid, pop the cubes out and transfer them into high-quality food-grade silicone bags like <a href="https://amzn.to/3QbCC5S" target="_blank" style="text-decoration:underline; font-weight:600; color:var(--teal-dark);">these classic stand-up bags</a> or <a href="https://amzn.to/4xjGrXh" target="_blank" style="text-decoration:underline; font-weight:600; color:var(--teal-dark);">these reusable freezer bags</a>.</p>
+        <p>When preparing homemade baby food, the fewer microplastics coming into contact with warm food, the better! Stashing your weekly cubes in high-quality silicone guarantees their meals stay pristine, non-toxic, and simple to defrost.</p>
+        <a class="shop-link" href="https://amzn.to/4v3Lb1C" target="_blank">Shop Freezer Trays</a>
+        <a class="shop-link" href="https://amzn.to/3QbCC5S" target="_blank" style="background:var(--warm-mid)">Shop Silicone Bags</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label honorary">The Recipe</p>
+        <h2>Baby's First Savory Chicken Liver Pâté</h2>
+        <p><em>Yield: Approx. 1 Cup &middot; Cook Time: 25 Minutes &middot; Frequency: Once Weekly</em></p>
+        <p>Infants are actually highly receptive to rich, savory, umami flavors if introduced early! Simmering the liver with shallots and blending it with rich grass-fed butter yields a velvety, mild texture that's incredible on baby-led weaning toast strips or mixed into standard purées.</p>
+        
+        <p class="supp-label" style="margin-top: 1.5rem;">Ingredients</p>
+        <ul class="recipe-list">
+          <li><strong>6 oz (168 grams)</strong> high-quality chicken livers (defrosted)</li>
+          <li><strong>1</strong> small shallot, peeled and chopped</li>
+          <li><strong>1 cup (240 ml)</strong> water</li>
+          <li><strong>1</strong> bay leaf <em>(optional)</em></li>
+          <li><strong>2 tbsp (28 g)</strong> unsalted butter, softened <em>(or extra virgin olive oil)</em></li>
+          <li><strong>For serving:</strong> Slices of toasted bread, cut into finger-length strips</li>
+        </ul>
+
+        <p class="supp-label">Preparation Instructions</p>
+        <ol class="recipe-list" style="padding-left: 1.2rem;">
+          <li>In a small pot, combine the chicken livers, chopped shallot, bay leaf, and 1 cup of water. Bring the mixture to a boil over medium-high heat.</li>
+          <li>Once boiling, lower the heat to a simmer. Cover and cook until the livers are entirely firm, between 15 and 20 minutes. A knife inserted into the thickest part should reveal no pink or purple left inside. Ensure your kitchen thermometer reads <strong>165°F (74°C)</strong>.</li>
+          <li>Use a slotted spoon to lift the cooked livers and shallots out of the poaching liquid, discarding the bay leaf. Allow them to cool until comfortable to touch.</li>
+          <li>Transfer the cooled livers and shallots into a food processor or small blender along with the 2 tablespoons of softened unsalted butter. Blend into a smooth, silky paste, scraping down the sides as you go. <em>(If the paste is too thick, loosen it with a splash of the remaining cooking liquid, breastmilk, or an extra pat of butter).</em></li>
+          <li>Set aside what you need for baby's meal today and tomorrow. Portion the rest straight into your freezer trays!</li>
+        </ol>
+
+        <div class="callout" style="margin-top: 1.5rem;">
+          <strong>Tip for Mom &amp; Dad:</strong> Season the adult portion of the leftover pâté with a pinch of sea salt and pepper, spread it on toast, and drizzle a sweet blueberry or berry reduction on top for an upscale adult appetizer!
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem; opacity: 0.8;">
+      Contact: <a href="mailto:Stephaniegkrouskos@gmail.com" style="text-decoration: underline;">Stephaniegkrouskos@gmail.com</a>
+    </p>
+    <p class="affiliate-disclosure">As an Amazon Associate, I earn a small commission from qualifying purchases made through links on this site, at no additional cost to you. I only recommend products I genuinely use and love.</p>
+  </footer>
+
+</body>
+</html>
