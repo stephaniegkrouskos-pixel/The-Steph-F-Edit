@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Day in the Life with a 10-Month-Old · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+/* FOOTER */
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  margin-top: 6rem;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+.site-footer a { color: var(--terracotta-light); text-decoration: none; }
+
+/* POST LAYOUT */
+.post-page { max-width: 740px; margin: 0 auto; padding: 4rem 2rem; }
+.post-page .back-link {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap .2s;
+  display: inline-flex;
+}
+.post-page .back-link:hover { gap: .6rem; }
+.post-page h1 { color: var(--warm-dark); margin: 0 0 .5rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+.post-page .post-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--warm-mid);
+  margin: 0 0 1.2rem;
+  line-height: 1.4;
+}
+.post-page .post-meta {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.post-page .post-body { color: #4a3020; font-size: 1.05rem; line-height: 1.85; }
+.post-page .post-body p { margin: 0 0 1.4rem; }
+.post-page .post-body a {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-page .post-body a:hover { color: var(--teal-dark); }
+
+/* COVER */
+.cover-photo {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 28px #c4755a18;
+  border: 1px solid var(--terracotta-light);
+}
+.cover-photo img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* TIMELINE BLOCKS */
+.timeline {
+  position: relative;
+  margin: 2.5rem 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 54px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--terracotta-light), var(--teal-light), var(--terracotta-light));
+}
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+.timeline-time {
+  flex-shrink: 0;
+  width: 54px;
+  text-align: right;
+  padding-top: .15rem;
+}
+.timeline-time span {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.3;
+}
+.timeline-dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  margin-top: .35rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 3px var(--cream);
+}
+.timeline-dot.teal { background: var(--teal); }
+.timeline-content {
+  flex: 1;
+  padding-bottom: .5rem;
+}
+.timeline-content h2 {
+  margin: 0 0 .4rem;
+  font-size: 1.5rem;
+  color: var(--warm-dark);
+  line-height: 1.2;
+}
+.timeline-content p {
+  margin: 0;
+  color: #5c3d2c;
+  font-size: .97rem;
+  line-height: 1.7;
+}
+
+/* WAKE WINDOW BADGE */
+.wake-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  font-family: 'Nunito', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .25rem .7rem;
+  border-radius: 20px;
+  margin-bottom: .6rem;
+  display: block;
+  width: fit-content;
+}
+.wake-badge.terracotta {
+  background: var(--terracotta-light);
+  color: var(--terracotta-dark);
+}
+
+/* CALLOUT NOTE */
+.callout-note {
+  background: linear-gradient(90deg, var(--teal-light), var(--cream));
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: .85rem 1.1rem;
+  font-size: .9rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin: 2rem 0;
+}
+.callout-note.terracotta {
+  background: linear-gradient(90deg, var(--terracotta-light), var(--cream));
+  border-left-color: var(--terracotta);
+  color: var(--terracotta-dark);
+}
+
+@media (max-width: 640px) {
+  .nav-links { gap: 1.2rem; }
+  .site-nav .brand { font-size: 1.3rem; }
+  .cover-photo { height: 220px; }
+  .timeline::before { left: 44px; }
+  .timeline-time { width: 44px; }
+  .timeline-time span { font-size: .65rem; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-page">
+
+    <a href="category-all-things-baby.html" class="back-link">← All Things Baby</a>
+
+    <h1>A Day in the Life with a 10-Month-Old</h1>
+    <p class="post-subtitle">This age is a lot. Here's what a typical day actually looks like for us.</p>
+    <p class="post-meta">All Things Baby &nbsp;·&nbsp; By Steph</p>
+
+    <div class="cover-photo">
+      <img src="swingcallie.jpeg" alt="Baby smiling in a swing at the park" />
+    </div>
+
+    <div class="post-body">
+
+      <p>Every day looks a little different at this age, but the bones of our routine are pretty locked in. We're doing two naps, three wake windows, and fitting a lot of life in between. Here's how it usually goes.</p>
+
+      <div class="callout-note terracotta">
+        ⏱ We follow wake windows pretty closely right now: 3 hours for the first, 3.5 for the second, and 3.5 for the third. It's not rigid, but it keeps the day predictable.
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>7:30<br>AM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Wake Up</h2>
+            <p>We start with a breastfeed, then either hang around the house for a bit or head out to grab a coffee. Getting out in the morning, even just for 20 minutes, makes a difference.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>8:30<br>AM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Breakfast</h2>
+            <p>Breakfast takes about 30 minutes at this age. There's a lot going on — exploring, throwing, occasionally eating. We just roll with it.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>9:00<br>AM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="wake-badge terracotta">Wake Window 1 · 3 Hours</span>
+            <h2>Playtime</h2>
+            <p>This is the best wake window of the day. We go outside, play on the grass, and work on standing and crawling. Baby is at peak energy and curiosity right now and it's genuinely fun to watch.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>10:30<br>AM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Morning Nap</h2>
+            <p>First wake window closes right around 10:30. Nap usually runs to noon — about an hour and a half. I try to get something done but honestly sometimes I just sit quietly and that's fine too.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>12:00<br>PM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="wake-badge">Wake Window 2 · 3.5 Hours</span>
+            <h2>Out the Door Again</h2>
+            <p>Second wake window is 3.5 hours, so we have a good stretch to work with. Depending on the day we'll do a Bunny Hive class, hit the grocery store, go to the park, or I'll drop baby at the Lifetime childcare while I work out. Mixing it up keeps us both sane.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>~1:00<br>PM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Lunch</h2>
+            <p>Lunch floats around depending on what we're doing. We follow hunger cues and don't stress about the exact time.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>Early<br>PM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Activity at Home</h2>
+            <p>When we get back we'll do something low-key — lately that's been the water play stand outside. It keeps baby busy for longer than you'd expect.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>3:30<br>PM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Afternoon Nap</h2>
+            <p>Shorter than the morning nap — usually 45 minutes to an hour — but still necessary. Everyone is better for it.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>4:15<br>PM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="wake-badge terracotta">Wake Window 3 · 3.5 Hours</span>
+            <h2>Wake Up & Breastfeed</h2>
+            <p>Always a nursing session after this nap. Third wake window is another 3.5 hours, which puts bedtime right around 7:30–7:45 — and that math works out perfectly for us.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>Late<br>PM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Stroller Walk</h2>
+            <p>We walk to the local park to swing and then walk home. Simple, free, and baby loves it.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>5:30<br>PM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Dinner</h2>
+            <p>Baby plays while I cook, then we do baby's dinner around 6. It's messy. That's just where we're at.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>6:00<br>PM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Dad Gets Home</h2>
+            <p>Dad takes over and does all the silly stuff — I don't need to explain this part to anyone who has a 10-month-old and a co-parent who just walked in the door.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>7:15<br>PM</span></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Bath, Teeth, Story</h2>
+            <p>Bath is a reliable wind-down. Quick tooth brush after (yes, already), then a book.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time"><span>7:45<br>PM</span></div>
+          <div class="timeline-dot teal"></div>
+          <div class="timeline-content">
+            <h2>Bed</h2>
+            <p>Dark room, white noise, one last breastfeed, and into the crib. Day done.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout-note">
+        ✨ Every day has its chaotic moments and its really good ones. This season is a lot — and it's going fast.
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
