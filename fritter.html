@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Going Out to Eat Doesn't End When Baby Arrives: Freezer Fritters That Travel Well · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+.post-header {
+  background: linear-gradient(135deg, var(--terracotta-light) 0%, var(--cream) 60%);
+  border-bottom: 1px solid var(--terracotta-light);
+  padding: 4rem 2rem 3rem;
+}
+
+.header-flex-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: left;
+}
+
+.header-text-column {
+  flex: 1;
+}
+
+.header-image-column {
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.header-image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #c4755a15;
+  display: block;
+}
+
+.post-header .category-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.post-header h1 {
+  color: var(--warm-dark);
+  margin: 0 0 .75rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+}
+.post-header .subtitle {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.post-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+.post-body > p {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+.supp-section {
+  margin: 3rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.supp-content {
+  padding: 2rem 2rem 1.5rem;
+}
+
+.supp-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+  color: var(--teal-dark);
+}
+
+.supp-label.honorary {
+  color: var(--warm-mid);
+}
+
+.supp-content h2 {
+  color: var(--warm-dark);
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.supp-content p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0 0 1.2rem;
+}
+
+.supp-content p:last-of-type {
+  margin-bottom: 1.4rem;
+}
+
+.callout {
+  background: var(--terracotta-light);
+  border-left: 3px solid var(--terracotta-dark);
+  border-radius: 0 8px 8px 0;
+  padding: .85rem 1.1rem;
+  margin: 0 0 1.4rem;
+  color: var(--warm-dark);
+  font-size: .93rem;
+  line-height: 1.7;
+}
+
+.callout strong {
+  color: var(--terracotta-dark);
+}
+
+.shop-link {
+  display: inline-block;
+  background: var(--teal-dark);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .65rem 1.4rem;
+  border-radius: 8px;
+  margin-top: .25rem;
+  transition: background .2s;
+  text-decoration: none;
+}
+.shop-link:hover { background: var(--teal); }
+
+/* Class for images within supp-sections (benefit cards) */
+.image-block {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin: 1.5rem auto 1.5rem;
+}
+
+.recipe-list {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  margin: 0 0 1.4rem;
+}
+
+.recipe-list li {
+  margin-bottom: 0.5rem;
+}
+
+.supp-divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 0 2rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 3rem 0;
+}
+
+.intro-box {
+  background: var(--warm-white);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.intro-box p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer .affiliate-disclosure {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .header-flex-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .header-image-column {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+  .post-body { padding: 2.5rem 1.25rem 4rem; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-header">
+    <div class="header-flex-container">
+      <div class="header-text-column">
+        <p class="category-label">All Things Baby</p>
+        <h1>Going Out to Eat Doesn't End When Baby Arrives: Freezer Fritters That Travel Well</h1>
+        <p class="subtitle">If you're a mom who actually likes going out to eat, having a baby doesn't have to mean giving that up. It just means you need a few things in your freezer that you can grab on your way out the door.</p>
+      </div>
+      <div class="header-image-column">
+        <img src="fritterphoto.jpeg" alt="Chicken Fritter Mix with Zucchini, Carrot, Rice, and Egg">
+      </div>
+    </div>
+  </div>
+
+  <div class="post-body">
+
+    <div class="intro-box">
+      <p>Most restaurants are happy to heat up something you bring for your baby. Hand the server a little container of frozen fritters, and nine times out of ten they'll pop them in the kitchen and bring them back warm. It's been, hands down, the biggest life-saver in keeping my social life and my baby fed.</p>
+    </div>
+
+    <p>The other piece of this puzzle is sodium. Babies under one shouldn't have added salt, which rules out basically every restaurant kids' menu and most adult dishes too. So the fix isn't avoiding restaurants, it's showing up prepared. These fritters are designed for exactly that: no added salt, balanced with fat, carbs, and protein in every bite, soft enough to be safe but textured enough for a 9-12 month old who's working on chewing and self-feeding.</p>
+
+    <p>Yes, there's an afternoon of front-end work here, cooking, shaping, freezing three batches at once. But the back-end payoff is what makes it worth it. Once they're in the freezer, every single meal after that takes about two minutes. No last-minute scrambling, no checking labels at a restaurant, no improvising with bread and butter because nothing on the menu works. It has genuinely saved my life on busy weeks and spontaneous outings alike.</p>
+
+    <p>All three recipes below freeze beautifully, reheat from frozen, and are sized for small hands and small bites.</p>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">The Formula</p>
+        <h2>Why Fritters Work So Well for This Age</h2>
+        <p>At 9-12 months, babies are moving past purées and into picking up food themselves. Fritters hit that sweet spot: soft enough to gum or chew, but with enough structure to hold in little fingers. Because they're patties, you can also control thickness for easier eating, and cut or break them into smaller pieces table-side if needed.</p>
+        <p>Each recipe below is built around the same formula: a protein, a starchy carb for binding and energy, a vegetable for fiber and micronutrients, an egg to bind everything together, and olive oil for healthy fat and for cooking. No salt, no added sugar, nothing that needs a watchful eye on ingredients lists.</p>
+        <div class="callout">
+          <strong>Make it your own:</strong> These recipes are completely interchangeable. Sometimes I swap the oat flour for cooked rice, or use whatever vegetable is about to go bad in my fridge instead of the one listed. The formula matters more than the exact ingredients. If you want to switch things up, you can always ask AI for a quick revision, swap in a different veggie, change the carb, adjust the flavor profile within the no-salt rule, and get a new variation in seconds.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Recipe One</p>
+        <h2>Beef, Sweet Potato &amp; Spinach Fritters</h2>
+        <p>Beef brings iron, which babies need more of around this age as their stores from birth start to deplete. Sweet potato adds natural sweetness and carbs, and spinach sneaks in iron and folate without overpowering the flavor.</p>
+
+        <p class="supp-label" style="margin-top: 1.5rem;">Ingredients (makes about 16-18 small fritters)</p>
+        <ul class="recipe-list">
+          <li><strong>1 lb</strong> ground beef (80/20 works well, the fat content helps here)</li>
+          <li><strong>1 cup</strong> sweet potato, cooked and mashed</li>
+          <li><strong>1 cup</strong> spinach, finely chopped and lightly steamed</li>
+          <li><strong>1</strong> egg</li>
+          <li><strong>1/3 cup</strong> oat flour or breadcrumbs (unsalted)</li>
+          <li><strong>2 tbsp</strong> olive oil, plus more for cooking</li>
+        </ul>
+
+        <p class="supp-label">Method</p>
+        <ol class="recipe-list" style="padding-left: 1.2rem;">
+          <li>Steam or roast the sweet potato until soft, then mash.</li>
+          <li>Wilt the spinach briefly in a pan, then chop finely once cooled.</li>
+          <li>In a bowl, mix the ground beef, mashed sweet potato, spinach, egg, oat flour, and 2 tbsp olive oil until well combined.</li>
+          <li>Form into small patties, about 1.5 inches across and 1/2 inch thick, sized for little hands.</li>
+          <li>Heat a thin layer of olive oil in a skillet over medium heat. Cook fritters 3-4 minutes per side, until browned and cooked through (internal temp 160°F).</li>
+          <li>Cool completely before freezing.</li>
+        </ol>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Recipe Two</p>
+        <h2>Chicken, Carrot &amp; Lentil Fritters</h2>
+        <p>This one's the lightest of the three but still well-rounded. Lentils bring plant protein, fiber, and iron; carrots add natural sweetness and beta-carotene; chicken keeps it lean.</p>
+
+        <p class="supp-label" style="margin-top: 1.5rem;">Ingredients (makes about 16-18 small fritters)</p>
+        <ul class="recipe-list">
+          <li><strong>1 lb</strong> ground chicken</li>
+          <li><strong>1/2 cup</strong> cooked lentils (red or brown, well cooked and slightly mashed)</li>
+          <li><strong>1/2 cup</strong> carrot, finely grated</li>
+          <li><strong>1</strong> egg</li>
+          <li><strong>1/4 cup</strong> oat flour or breadcrumbs (unsalted)</li>
+          <li><strong>2 tbsp</strong> olive oil, plus more for cooking</li>
+        </ul>
+
+        <p class="supp-label">Method</p>
+        <ol class="recipe-list" style="padding-left: 1.2rem;">
+          <li>Cook lentils until very soft, then mash slightly with a fork (you want some texture, not a full purée).</li>
+          <li>Grate the carrot finely so it cooks through quickly and stays easy to chew.</li>
+          <li>Combine ground chicken, mashed lentils, grated carrot, egg, oat flour, and olive oil in a bowl. Mix until evenly combined.</li>
+          <li>Shape into small patties, about 1.5 inches across.</li>
+          <li>Cook in a skillet with a thin layer of olive oil over medium heat, about 3-4 minutes per side, until golden and cooked through (internal temp 165°F for poultry).</li>
+          <li>Cool fully before freezing.</li>
+        </ol>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section">
+      <div class="supp-content">
+        <p class="supp-label">Recipe Three</p>
+        <h2>Salmon, Zucchini &amp; Sweet Potato Fritters</h2>
+        <p>Salmon is one of the best ways to get omega-3s into your baby's diet early, plus it's naturally soft once cooked, which makes it easy to fold into a fritter. Zucchini keeps things moist without adding much flavor resistance, and sweet potato rounds out the carbs.</p>
+
+        <p class="supp-label" style="margin-top: 1.5rem;">Ingredients (makes about 14-16 small fritters)</p>
+        <ul class="recipe-list">
+          <li><strong>1 lb</strong> salmon fillet, cooked and flaked (skin and bones removed)</li>
+          <li><strong>1/2 cup</strong> zucchini, grated and squeezed dry</li>
+          <li><strong>1/2 cup</strong> sweet potato, cooked and mashed</li>
+          <li><strong>1</strong> egg</li>
+          <li><strong>1/4 cup</strong> oat flour or breadcrumbs (unsalted)</li>
+          <li><strong>2 tbsp</strong> olive oil, plus more for cooking</li>
+        </ul>
+
+        <p class="supp-label">Method</p>
+        <ol class="recipe-list" style="padding-left: 1.2rem;">
+          <li>Bake or steam the salmon until just cooked through, then flake with a fork, double-checking for any small bones.</li>
+          <li>Grate the zucchini, then squeeze out excess water in a clean towel, this keeps the fritters from getting soggy.</li>
+          <li>Mix the flaked salmon, zucchini, mashed sweet potato, egg, oat flour, and olive oil in a bowl until combined.</li>
+          <li>Form into small patties.</li>
+          <li>Cook in a skillet with a thin layer of olive oil over medium heat, 2-3 minutes per side, since the salmon is already cooked, you're mainly browning and setting the patty.</li>
+          <li>Cool completely before freezing.</li>
+        </ol>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="supp-section" style="background: #faf6f2; border: 1px solid var(--terracotta-light);">
+      <div class="supp-content">
+        <p class="supp-label" style="color: var(--terracotta-dark);">Parenting Hack</p>
+        <h2>Freezing &amp; Reheating</h2>
+        <p>Lay the cooled fritters on a parchment-lined tray and freeze flat for an hour or two, then transfer to your storage container. This step matters more than it sounds — if you skip straight to bagging them, they'll freeze together into one solid clump and you'll be chipping them apart every time you need just a few. The quick individual freeze first means they stay loose and you can grab exactly what you need.</p>
+        <p>For storage, I use <a href="https://amzn.to/4xz0zVn" target="_blank" rel="noopener" style="color: var(--teal-dark); text-decoration: underline;">food-grade silicone bags</a> to avoid microplastics — especially important for baby food. They seal well, lay flat in the freezer, and hold up for repeated use. Fritters keep well for about 2-3 months.</p>
+        <div class="callout">
+          <strong>For restaurant outings:</strong> I pull a few out the night before and let them thaw in the fridge, then pack them in a small insulated container. If I forget, frozen works too, just give the server a heads up that they're frozen solid and might need an extra minute or two. Most kitchens are completely fine reheating something this simple, either in a microwave or a quick pan sear.
+        </div>
+        <p>A quick reheat at home is just as easy: a minute or two in the microwave, or a few minutes in a skillet over low heat if you want to crisp the outside back up.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem; opacity: 0.8;">
+      Contact: <a href="mailto:Stephaniegkrouskos@gmail.com" style="text-decoration: underline;">Stephaniegkrouskos@gmail.com</a>
+    </p>
+    <p class="affiliate-disclosure">As an Amazon Associate, I earn a small commission from qualifying purchases made through links on this site, at no additional cost to you. I only recommend products I genuinely use and love.</p>
+  </footer>
+
+</body>
+</html>
