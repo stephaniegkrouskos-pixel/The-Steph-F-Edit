@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Baby Sunscreens · The Steph F Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --terracotta: #e8a98a;
+  --terracotta-light: #f2d4c4;
+  --terracotta-dark: #c4755a;
+  --teal: #7bbfba;
+  --teal-light: #c2e0dc;
+  --teal-dark: #4e9c96;
+  --cream: #faf6f2;
+  --warm-white: #fffdf9;
+  --warm-dark: #3a2419;
+  --warm-mid: #8c6654;
+  --muted: #b89b8e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--warm-dark);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: .01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-nav {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--terracotta-light);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #c4755a0f;
+}
+.site-nav .brand {
+  color: var(--terracotta-dark);
+  letter-spacing: .04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav .brand span { color: var(--teal-dark); font-style: normal; }
+.nav-links { gap: 2.2rem; margin: 0; padding: 0; list-style: none; display: flex; }
+.nav-links a {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--terracotta-dark); }
+
+.post-header {
+  background: linear-gradient(135deg, var(--teal-light) 0%, var(--cream) 60%);
+  border-bottom: 1px solid var(--teal-light);
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+.post-header .category-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.post-header h1 {
+  color: var(--warm-dark);
+  margin: 0 auto .75rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  max-width: 780px;
+  line-height: 1.15;
+}
+.post-header .subtitle {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.post-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+.post-body > p {
+  color: var(--warm-mid);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+.ewg-note {
+  background: var(--teal-light);
+  border-left: 4px solid var(--teal-dark);
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  margin: 0 0 2.5rem;
+}
+.ewg-note p {
+  color: var(--warm-dark);
+  font-size: .93rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.ewg-note strong { color: var(--teal-dark); }
+
+.sunscreen-section {
+  margin: 3rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.sunscreen-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunscreen-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+}
+
+.sunscreen-content {
+  padding: 2rem 2rem 1.5rem;
+}
+
+.sunscreen-rank {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+  color: var(--teal-dark);
+}
+
+.ewg-badge {
+  display: inline-block;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  font-family: 'Nunito', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .25rem .75rem;
+  border-radius: 20px;
+  margin-bottom: .75rem;
+}
+
+.sunscreen-content h2 {
+  color: var(--warm-dark);
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.sunscreen-content p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+.shop-link {
+  display: inline-block;
+  background: var(--teal-dark);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .65rem 1.4rem;
+  border-radius: 8px;
+  margin-top: .25rem;
+  transition: background .2s;
+  text-decoration: none;
+}
+.shop-link:hover { background: var(--teal); }
+
+.tips-section {
+  background: var(--warm-white);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem 0 0;
+  box-shadow: 0 2px 18px #c4755a10;
+}
+
+.tips-section h3 {
+  color: var(--warm-dark);
+  font-size: 1.6rem;
+  margin: 0 0 1.2rem;
+}
+
+.tips-section p {
+  color: var(--warm-mid);
+  font-size: .97rem;
+  line-height: 1.8;
+  margin: 0 0 .9rem;
+}
+
+.tips-section p:last-child { margin-bottom: 0; }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--terracotta-light);
+  margin: 3rem 0;
+}
+
+.site-footer {
+  background: var(--warm-dark);
+  color: #ffffff8c;
+  text-align: center;
+  letter-spacing: .08em;
+  padding: 2.5rem 2rem;
+  font-size: .82rem;
+}
+
+@media (max-width: 640px) {
+  .site-nav { padding: 0 1rem; height: 60px; }
+  .nav-links { gap: 0.75rem; }
+  .site-nav .brand { font-size: 1.15rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: .05em; }
+  .post-body { padding: 2.5rem 1.25rem 4rem; }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">The Steph F <span>Edit</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="category-all-things-baby.html">All Things Baby</a></li>
+      <li><a href="category-fashion.html">Fashion</a></li>
+      <li><a href="category-fitness.html">Fitness</a></li>
+    </ul>
+  </nav>
+
+  <div class="post-header">
+    <p class="category-label">All Things Baby</p>
+    <h1>The 4 Best Baby Sunscreens (According to a Mom Who Actually Read the Labels)</h1>
+    <p class="subtitle">I went down the rabbit hole so you don't have to. Here's what I actually feel good about putting on my baby this summer.</p>
+  </div>
+
+  <div class="post-body">
+
+    <p>Summer is here, and if you have a baby, you already know that slathering on just any sunscreen isn't really an option. I went full deep dive on this — cross-referencing EWG's Skin Deep database, reading ingredient labels, and honestly stressing about it more than I probably needed to. But here's what I landed on, and why I actually feel good about these picks.</p>
+
+    <div class="ewg-note">
+      <p>I'm referencing <strong>EWG (Environmental Working Group) scores</strong> throughout. EWG rates products on a scale of <strong>1–10</strong>, where <strong>1 is the cleanest</strong> and 10 is the most concerning. For my baby, I'm only comfortable with a 1 or 2.</p>
+    </div>
+
+    <!-- #1 Badger -->
+    <div class="sunscreen-section">
+      <div class="sunscreen-image">
+        <img src="badger.jpg" alt="Badger Baby Mineral Sunscreen SPF 40">
+      </div>
+      <div class="sunscreen-content">
+        <p class="sunscreen-rank">#1 — The Gold Standard</p>
+        <div class="ewg-badge">EWG Score: 1</div>
+        <h2>Badger Baby Sunscreen SPF 40</h2>
+        <p>This one consistently tops the EWG list and honestly it deserves it. It's zinc oxide only, unscented, and the ingredient list is short enough that I can actually read it without Googling anything. The texture is thick — I won't lie to you — but that's kind of the price you pay for clean. It goes on white and stays white, which my baby does not care about at all, so that's fine. If you're only going to keep one sunscreen in the diaper bag, make it this one.</p>
+        <a class="shop-link" href="https://amzn.to/44rbSBM" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <!-- #2 Thinkbaby -->
+    <div class="sunscreen-section">
+      <div class="sunscreen-image">
+        <img src="thinkbaby.jpg" alt="Thinkbaby Safe Sunscreen SPF 50+">
+      </div>
+      <div class="sunscreen-content">
+        <p class="sunscreen-rank">#2 — Best for Long Days Outside</p>
+        <div class="ewg-badge">EWG Score: 1</div>
+        <h2>Thinkbaby Safe Sunscreen SPF 50+</h2>
+        <p>Thinkbaby was literally formulated by a dad who was frustrated with what was on the market, which I appreciate deeply. It's also zinc oxide based, reef-safe, and free from the usual suspects — oxybenzone, parabens, phthalates. The SPF 50+ gives me a little extra peace of mind for long outdoor days. It blends a bit easier than Badger, which is nice when your baby is very much not cooperating.</p>
+        <a class="shop-link" href="https://amzn.to/4agcdL6" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <!-- #3 All Good -->
+    <div class="sunscreen-section">
+      <div class="sunscreen-image">
+        <img src="all_good.jpg" alt="All Good Kids Mineral Sunscreen SPF 30">
+      </div>
+      <div class="sunscreen-content">
+        <p class="sunscreen-rank">#3 — Easiest to Apply</p>
+        <div class="ewg-badge">EWG Score: 1</div>
+        <h2>All Good Kids Sunscreen SPF 30</h2>
+        <p>All Good is a brand I came to late and now I'm kind of obsessed. Their kids formula is zinc-based, certified reef-friendly, and water resistant for up to 80 minutes — which is huge for pool days. It's also one of the easier ones to spread, which matters when application time is approximately 4 seconds before the wiggling starts.</p>
+        <a class="shop-link" href="https://amzn.to/4vBxkQw" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <!-- #4 Earth Mama -->
+    <div class="sunscreen-section">
+      <div class="sunscreen-image">
+        <img src="earthmama.jpg" alt="Earth Mama Mineral Sunscreen SPF 40">
+      </div>
+      <div class="sunscreen-content">
+        <p class="sunscreen-rank">#4 — Best for Sensitive Skin</p>
+        <div class="ewg-badge">EWG Score: 1</div>
+        <h2>Earth Mama Mineral Sunscreen SPF 40</h2>
+        <p>Earth Mama is a brand I already trusted for other baby stuff, so it wasn't a huge leap to try their sunscreen. It checks all the boxes — mineral only, no synthetic fragrance, free from chemicals I can't pronounce. The SPF 40 is solid for everyday use, and the lotion formula is gentle enough for sensitive skin. Works especially well on the face, which is where I always stress the most.</p>
+        <a class="shop-link" href="https://amzn.to/3SsEFDu" target="_blank" rel="noopener">Shop on Amazon</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="tips-section">
+      <h3>A Few Things Worth Knowing</h3>
+      <p><strong>Avoid oxybenzone and octinoxate.</strong> These are the chemical filters most commonly flagged by EWG and have been shown to absorb into the bloodstream. For a baby's skin, that's a hard no for me.</p>
+      <p><strong>Mineral means a physical barrier.</strong> Zinc oxide and titanium dioxide sit on top of the skin rather than being absorbed. That's what you want for a baby.</p>
+      <p><strong>Reapply every 2 hours,</strong> or after water. Even the best sunscreen stops working if you forget this part.</p>
+      <p><strong>Babies under 6 months</strong> should mostly be kept out of direct sun rather than covered in sunscreen — the AAP recommends sunscreen only on small exposed areas if shade and clothing aren't an option.</p>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 The Steph F Edit</p>
+  </footer>
+
+</body>
+</html>
